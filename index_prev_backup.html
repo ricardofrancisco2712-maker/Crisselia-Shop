@@ -1,0 +1,2976 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Crisselia | Alta Cosmética Capilar</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      main> :first-child {
+        margin-top: 0 !important;
+      }
+
+      main> :last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    /* Scrollbar Estilizada y Totalmente Funcional */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      overflow-y: auto;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f2f4f7;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #00334f;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #006398;
+    }
+
+    * {
+      scrollbar-width: thin;
+      scrollbar-color: #00334f #f2f4f7;
+    }
+
+    @keyframes gentleFloat {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    @keyframes softPulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.04);
+      }
+    }
+
+    .animate-float {
+      animation: gentleFloat 6s ease-in-out infinite;
+    }
+
+    .animate-soft-pulse {
+      animation: softPulse 3s ease-in-out infinite;
+    }
+
+    .product-item,
+    .group.p-space-md {
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+    }
+
+    .product-item:hover,
+    .group.p-space-md:hover {
+      transform: translateY(-4px);
+    }
+
+    button,
+    a.px-6,
+    .filter-btn,
+    .need-btn,
+    .size-btn {
+      transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
+    }
+
+    button:active,
+    a.px-6:active,
+    .filter-btn:active,
+    .need-btn:active,
+    .size-btn:active {
+      transform: scale(0.96) !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      *,
+      ::before,
+      ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+
+      .animate-float,
+      .animate-soft-pulse {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "surface-container-high": "#e6e8eb",
+            "surface-bright": "#f7f9fc",
+            "on-secondary-fixed": "#001d31",
+            "surface": "#f7f9fc",
+            "on-surface-variant": "#41474e",
+            "on-tertiary-fixed-variant": "#004c69",
+            "inverse-surface": "#2d3133",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-container": "#88b9e3",
+            "outline": "#72787f",
+            "on-primary-fixed-variant": "#0e4b6f",
+            "tertiary-fixed-dim": "#7bd0ff",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#004c68",
+            "error": "#ba1a1a",
+            "inverse-primary": "#9bccf6",
+            "surface-variant": "#e0e3e6",
+            "on-primary-fixed": "#001e30",
+            "on-surface": "#191c1e",
+            "primary-container": "#0c4a6e",
+            "inverse-on-surface": "#eff1f4",
+            "surface-tint": "#2f6388",
+            "secondary-fixed-dim": "#93ccff",
+            "on-secondary": "#ffffff",
+            "on-primary": "#ffffff",
+            "surface-container-low": "#f2f4f7",
+            "surface-dim": "#d8dadd",
+            "surface-container-highest": "#e0e3e6",
+            "primary-fixed-dim": "#9bccf6",
+            "on-tertiary-container": "#3dc0fc",
+            "tertiary-fixed": "#c4e7ff",
+            "secondary": "#006398",
+            "surface-container": "#eceef1",
+            "primary": "#00334f",
+            "secondary-container": "#5bb8fe",
+            "on-tertiary-fixed": "#001e2c",
+            "on-secondary-container": "#00476e",
+            "primary-fixed": "#cbe6ff",
+            "secondary-fixed": "#cce5ff",
+            "on-error": "#ffffff",
+            "on-background": "#191c1e",
+            "tertiary": "#003449",
+            "on-error-container": "#93000a",
+            "outline-variant": "#c1c7cf",
+            "on-tertiary": "#ffffff",
+            "on-secondary-fixed-variant": "#004b73",
+            "background": "#f7f9fc"
+          },
+          borderRadius: {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          spacing: {
+            "margin-mobile": "1.25rem",
+            "gutter": "1.5rem",
+            "space-xl": "3rem",
+            "margin": "3rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.5rem",
+            "space-lg": "1.75rem"
+          },
+          fontFamily: {
+            "title-md": ["Inter", "sans-serif"],
+            "title-lg": ["Bodoni Moda", "serif"],
+            "body-sm": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "display-lg": ["Bodoni Moda", "serif"],
+            "headline-md": ["Bodoni Moda", "serif"],
+            "headline-lg-mobile": ["Bodoni Moda", "serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "label-lg": ["Inter", "sans-serif"],
+            "display-lg-mobile": ["Bodoni Moda", "serif"],
+            "headline-lg": ["Bodoni Moda", "serif"]
+          },
+          fontSize: {
+            "title-md": ["16px", { lineHeight: "24px", letterSpacing: "0.01em", fontWeight: "600" }],
+            "title-lg": ["20px", { lineHeight: "28px", fontWeight: "600" }],
+            "body-sm": ["13px", { lineHeight: "18px", fontWeight: "400" }],
+            "label-sm": ["11px", { lineHeight: "14px", letterSpacing: "0.06em", fontWeight: "500" }],
+            "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "600" }],
+            "headline-md": ["26px", { lineHeight: "32px", fontWeight: "500" }],
+            "headline-lg-mobile": ["28px", { lineHeight: "34px", fontWeight: "500" }],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "300" }],
+            "body-md": ["15px", { lineHeight: "22px", fontWeight: "400" }],
+            "label-lg": ["13px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "600" }],
+            "display-lg-mobile": ["38px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "600" }],
+            "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "500" }]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body class="bg-surface font-body-md text-on-surface antialiased">
+  <!-- HEADER FIJO ELEGANTE -->
+  <header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(12,74,110,0.06)]">
+    <!-- Top Announcement Bar -->
+    <div class="w-full bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin">
+      <div class="max-w-7xl mx-auto flex items-center justify-between font-label-sm text-label-sm">
+        <div class="hidden sm:flex items-center gap-space-sm">
+          <span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">local_shipping</span>
+          <span>Envío express gratuito en pedidos superiores a $RD 2,500</span>
+        </div>
+        <div class="mx-auto sm:mx-0 font-label-sm tracking-wider uppercase text-tertiary-fixed">
+          Cosmética Capilar Italiana de Vanguardia
+        </div>
+        <div class="hidden md:flex items-center gap-space-md">
+          <span class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-[13px] text-tertiary-fixed-dim">verified</span>
+            Garantía de Fórmula Original
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation Bar -->
+    <div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+      <!-- Logo -->
+      <div class="flex items-center gap-space-md">
+        <a class="flex items-center gap-space-sm" href="#hero" onclick="scrollToSection('hero', event)">
+          <img alt="Logotipo Crisselia" class="h-8 w-auto object-contain"
+            src="https://lh3.googleusercontent.com/aida/AEtjO1VDJlKngDoOT7IonhrAlpU-T2GD1NgZH2vo_RUwj1ffeXEY9pl_Qoc1RQn_YhnbRKXmvFl3jC6-xQQCGInZiW4uJWOtLOh0Fw4VhUa5ChhzQbIucxkmfsec1KYjZX57xhXa7AFA--IoEXVNT19puDZm-zdnH9FdN-vG7T4oiwY8Qw2lFeky35_wiaijod0qaCSGgB0FEk4gx6xtyy-gt-yhOvwNy-FZfzp312443Mc0qh_oQS0_fbeXPw" />
+          <div class="hidden sm:flex flex-col">
+            <span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">Crisselia</span>
+            <span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase mt-0.5">Haute
+              Coiffure B2C</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div class="hidden lg:flex flex-1 max-w-md mx-space-md">
+        <div class="relative w-full flex items-center">
+          <span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span>
+          <input id="header-search-input" oninput="handleSearch(this.value)"
+            class="w-full bg-surface-container-lowest pl-10 pr-12 py-space-xs text-body-sm font-body-sm text-on-surface rounded placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-secondary focus:bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]"
+            placeholder="Buscar champú, sérum, mascarilla... (Ctrl+K)" type="text" />
+          <span
+            class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-[10px] text-on-surface-variant">⌘K</span>
+        </div>
+      </div>
+
+      <!-- Action Icons (Wishlist, Account, Cart) -->
+      <div class="flex items-center gap-space-sm sm:gap-space-md">
+        <button aria-label="Favoritos"
+          class="relative p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center rounded-full hover:bg-surface-container"
+          onclick="openWishlistModal()">
+          <span class="material-symbols-outlined text-[22px]">favorite</span>
+          <span id="wishlist-count-badge"
+            class="hidden absolute top-1 right-1 min-w-[16px] h-4 px-1 bg-error text-on-error rounded-full font-label-sm text-[9px] flex items-center justify-center">0</span>
+        </button>
+
+        <button
+          class="hidden sm:flex items-center gap-space-xs py-1.5 px-space-sm text-body-sm font-label-lg text-on-surface hover:text-primary transition-colors rounded hover:bg-surface-container"
+          onclick="openAccountModal()">
+          <span class="material-symbols-outlined text-[20px]">person</span>
+          <span>Mi Cuenta</span>
+        </button>
+
+        <button id="cart-btn"
+          class="relative flex items-center gap-space-xs py-1.5 px-space-sm bg-surface-container-lowest rounded text-on-surface hover:bg-surface-container transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.05)] cursor-pointer"
+          onclick="openCartDrawer()">
+          <span class="material-symbols-outlined text-[20px] text-secondary">shopping_bag</span>
+          <span class="hidden md:inline font-label-lg text-label-lg">Cesta</span>
+          <span id="cart-count-badge"
+            class="flex items-center justify-center min-w-[20px] h-5 px-1 bg-secondary text-on-secondary rounded-full font-label-sm text-[11px] font-bold">2</span>
+        </button>
+
+        <button
+          class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-on-primary hover:bg-primary-container transition-colors"
+          onclick="openAccountModal()" aria-label="Perfil de usuario">
+          <span class="material-symbols-outlined text-on-primary text-[18px]">person</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Tabs Navigation Bar -->
+    <div
+      class="w-full bg-surface-container-low/70 backdrop-blur-md overflow-x-auto scrollbar-none border-t border-outline-variant/30">
+      <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+        <nav class="flex items-center gap-space-xs py-space-xs whitespace-nowrap min-w-max">
+          <a class="px-space-sm py-1 transition-colors bg-primary text-on-primary rounded font-label-lg text-label-lg nav-link"
+            href="#hero" onclick="setActiveNav(this); scrollToSection('hero', event)">Inicio</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#catalogo" onclick="setActiveNav(this); scrollToSection('catalogo', event)">Catálogo</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#catalogo"
+            onclick="setActiveNav(this); filterCategory('Champús & Limpieza Suave'); scrollToSection('catalogo', event)">Champús
+            &amp; Lavado</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#catalogo"
+            onclick="setActiveNav(this); filterCategory('Mascarillas Reparadoras'); scrollToSection('catalogo', event)">Acondicionadores
+            &amp; Mascarillas</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#mas-vendidos" onclick="setActiveNav(this); scrollToSection('mas-vendidos', event)">Ofertas &amp;
+            Bestsellers</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#diagnostico" onclick="setActiveNav(this); scrollToSection('diagnostico', event)">Diagnóstico
+            Capilar</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#sobre-nosotros" onclick="setActiveNav(this); scrollToSection('sobre-nosotros', event)">Sobre
+            Nosotros</a>
+          <a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors nav-link"
+            href="#contacto" onclick="setActiveNav(this); scrollToSection('contacto', event)">Contacto</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="w-full pt-36 lg:pt-40 bg-surface min-h-screen">
+    <div class="flex flex-col w-full">
+      <!-- Top Ambient Glow Aura -->
+      <div class="relative w-full overflow-hidden" id="hero">
+        <div
+          class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1100px] h-[520px] bg-gradient-to-b from-secondary-fixed/30 via-tertiary-fixed-dim/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10">
+        </div>
+
+        <!-- 1. HERO SECTION -->
+        <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-6 pb-space-xl">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-gutter items-center">
+            <!-- Left Hero Column -->
+            <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+              <!-- Editorial Pill Tag -->
+              <div
+                class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+                <span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                <span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">Fórmulas Puras B2C •
+                  Alta Cosmética Diaria</span>
+              </div>
+
+              <!-- Main Title (Bodoni Moda) -->
+              <h1
+                class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary tracking-tight leading-[1.08]">
+                El Cuidado Sublime <br class="hidden sm:inline" />
+                <span class="italic font-normal text-secondary">que Tu Cabello</span> Merece
+              </h1>
+
+              <!-- Subtitle -->
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                Fórmulas botánicas infusionadas con ácido hialurónico biomolecular, aminoácidos de seda y aceites de
+                prensado en frío para restaurar la pureza y luminosidad de tu fibra capilar desde casa.
+              </p>
+
+              <!-- CTAs -->
+              <div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+                <a class="px-6 py-3.5 bg-primary text-on-primary rounded font-label-lg text-label-lg tracking-wide hover:bg-primary-container transition-all duration-300 shadow-[0_8px_24px_rgba(0,51,79,0.18)] flex items-center gap-space-xs group"
+                  href="#catalogo" onclick="scrollToSection('catalogo', event)">
+                  <span>Explorar Catálogo</span>
+                  <span
+                    class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+                </a>
+                <a class="px-6 py-3.5 bg-surface-container-lowest text-primary rounded font-label-lg text-label-lg tracking-wide hover:bg-surface-container-low transition-all duration-300 shadow-sm flex items-center gap-space-xs"
+                  href="#diagnostico" onclick="scrollToSection('diagnostico', event)">
+                  <span class="material-symbols-outlined text-[18px] text-secondary">auto_awesome</span>
+                  <span>Descubrir Mi Rutina</span>
+                </a>
+              </div>
+
+              <!-- Guarantees Chips Bar -->
+              <div class="w-full pt-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+                <div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">0% Sulfatos &amp; Sal</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">wb_twilight</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">Brillo Espejo 72h</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">cruelty_free</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">100% Cruelty-Free</span>
+                </div>
+                <div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+                  <span class="material-symbols-outlined text-secondary text-[18px]">flag</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-semibold">Fórmula Italiana</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Hero Star Product Feature -->
+            <div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+              <div
+                class="relative w-full max-w-md bg-surface-container-lowest/90 backdrop-blur-xl p-space-md rounded-xl shadow-[0_20px_50px_rgba(0,51,79,0.08)] flex flex-col gap-space-md animate-float">
+                <div class="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-container-low">
+                  <img class="w-full h-full object-cover" alt="Diamond Elixir Sérum Capilar Sublime"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1UO5YrPah-mCJOH7UokXNZotpFXp1DYFjYOTv9WUDNzSo95IQXzuwYeRKuV5ldA15Rz7mrrb9HCwUWwE3dBhbXk_xumFGTyar9nJR5QDvxbFaUZYTU-CW3a0wRKvyt_lWLUjQJLtRP8-S89p8zGADtt5LvyP08pp_7RBOi19xA9SakW_m_6FXF48Fgvb1i2SzCP_TIG6P_i59mpMQ2VAUPTjYPEbaLx165QOReFSC0OwiXiWTV9ZhmQ-Q" />
+                  <div
+                    class="absolute top-3 left-3 px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm tracking-wider uppercase rounded-full shadow-md animate-soft-pulse">
+                    Bestseller #1
+                  </div>
+                  <div
+                    class="absolute top-3 right-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm flex items-center gap-1">
+                    <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                      style='font-variation-settings: "FILL" 1;'>star</span>
+                    <span class="font-label-sm text-label-sm text-primary font-bold">4.9</span>
+                  </div>
+                </div>
+
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between">
+                    <span
+                      class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">Sérum
+                      Protector &amp; Brillo</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">100 ml e 3.38 fl. oz.</span>
+                  </div>
+                  <h2 class="font-headline-md text-headline-md text-primary leading-tight">
+                    Diamond Elixir Sérum Capilar Sublime
+                  </h2>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">
+                    Infusión botánica con gotas de diamante micronizado y micro-aceite de camelia. Sellado inmediato de
+                    cutículas y termo-escudo hasta 230°C.
+                  </p>
+
+                  <div class="pt-2 flex items-center justify-between">
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Precio
+                        Final PVP</span>
+                      <div class="flex items-baseline gap-2">
+                        <span class="font-title-lg text-title-lg text-primary font-bold">$RD 950</span>
+                        <span class="font-body-sm text-body-sm text-on-surface-variant line-through">$RD 1,200</span>
+                      </div>
+                    </div>
+                    <button
+                      class="px-5 py-2.5 bg-secondary text-on-secondary rounded font-label-lg text-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm flex items-center gap-1.5"
+                      onclick="quickAddToCart('Diamond Elixir Sérum Capilar Sublime', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1UO5YrPah-mCJOH7UokXNZotpFXp1DYFjYOTv9WUDNzSo95IQXzuwYeRKuV5ldA15Rz7mrrb9HCwUWwE3dBhbXk_xumFGTyar9nJR5QDvxbFaUZYTU-CW3a0wRKvyt_lWLUjQJLtRP8-S89p8zGADtt5LvyP08pp_7RBOi19xA9SakW_m_6FXF48Fgvb1i2SzCP_TIG6P_i59mpMQ2VAUPTjYPEbaLx165QOReFSC0OwiXiWTV9ZhmQ-Q', '100 ml')">
+                      <span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+                      <span>Añadir</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 2. CATEGORÍAS CAPILARES DESTACADAS -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="categorias">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+            <div>
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Descubre
+                Por Tratamiento</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-1">Categorías Capilares</h2>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+              Fórmulas dermatológicamente testadas sin sulfatos agresivos para potenciar la belleza natural de cada
+              hebra.
+            </p>
+          </div>
+
+          <!-- Category Cards Grid -->
+          <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+            <!-- Category 1 -->
+            <a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm cursor-pointer"
+              href="#catalogo" onclick="filterCategory('Champús & Limpieza Suave'); scrollToSection('catalogo', event)">
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+                <img class="w-full h-full object-cover" alt="Champús & Limpieza"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB7pN5afEptmZP0lJOoNfUpta-mdzK9O4P-MuprKJjDB-M6wQnu-Jd96jTs_UdQzfeNiLBNxl5ih6Fd-aSfmbRlLwkXcVe_iQoeiPOyb2r1HIny6l-VcZGNdKQd32LNxPbQ1KGApgKJT-DuuGa8uNQhcOO-gfdtFGUdubKov7M0t55h-f8JWM_cUCSQ2E4jv4E8cGAM6DfuHmHG4mlkeDuWxtLAW64zB14-Ka3XDe5j09eLPib0aY" />
+              </div>
+              <span
+                class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Champús
+                &amp; Limpieza</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Sin sal ni sulfatos</span>
+            </a>
+
+            <!-- Category 2 -->
+            <a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm cursor-pointer"
+              href="#catalogo" onclick="filterCategory('Mascarillas Reparadoras'); scrollToSection('catalogo', event)">
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+                <img class="w-full h-full object-cover" alt="Mascarillas Reparadoras"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbv8iEMmc0uAofyGdLxU2XJjL-Jn-NKToWSJH40D30KeMpysu-2iMK2bZP5A8fKQzRHVsCBsTHN4c3xEFhrKZfgzLufjIti-PjBBRnB7Mqirtj9VDnMiPK4tU6wMZgevmvjeBQAqeRRuMNhaSbiR10O0Uo4PgriOjqk7DsFTjcuQL-AVITIQutVc1bmSkAjkpGlahK8kdKISYp86aKKF1-wYCi7vtxYFhjYa90jAEFoUa3PzdH-yo" />
+              </div>
+              <span
+                class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Mascarillas
+                Reparadoras</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Plex y aminoácidos</span>
+            </a>
+
+            <!-- Category 3 -->
+            <a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm cursor-pointer"
+              href="#catalogo"
+              onclick="filterCategory('Sérums & Aceites de Brillo'); scrollToSection('catalogo', event)">
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+                <img class="w-full h-full object-cover" alt="Sérums & Aceites"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagvXiAzljL5bgFhVTMvAf_utZtFF_-TcSmmQaZ2s4F2c7XEsQ7ngeSqQvGqBDFbxFwqPPEbqhv65Lrr5NGUoykKB5qCMtOXfDVNbrzFPMrnESY7UOCtkhRFcjDJd07ef4VMJ9H7pxFlHuxWVftmeUWHjqDWW3byxSPBkHW5HR1It-grEOUHFVYU04NRzKhDWWmeiM7Zvg6IUFCQpqGzKYVXHmn1jm2L6yxFyP_AjEklobaQY57ic" />
+              </div>
+              <span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Sérums
+                &amp; Aceites</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Acabado brillo espejo</span>
+            </a>
+
+            <!-- Category 4 -->
+            <a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm cursor-pointer"
+              href="#catalogo" onclick="filterCategory('Rizos & Hidratación'); scrollToSection('catalogo', event)">
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+                <img class="w-full h-full object-cover" alt="Rizos & Hidratación"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDccVoxlI2qrO8muu8zD_q2SSXRflJGJ1L3kDk_IcfKbUsoO6ulKqZn_k1GFIfMV67Z776EAdzhLmeDv13jlptBL8gkD0JR8_EeRbV4wR_sy3TQZJXmFcvGLz-fpfXVFO2C424RayFHZ42x-2dvuHLxZLNzC9MGa_SYiqrxg4svKh6BAel-P0BDJREwO-nM-gTyqDI5wHTwiAsRW5L2-reteQZwRAAMXIQJeSCJ0_mlwMoEZASMJc" />
+              </div>
+              <span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Rizos
+                &amp; Hidratación</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Definición elástica</span>
+            </a>
+
+            <!-- Category 5 -->
+            <a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm col-span-2 sm:col-span-1 cursor-pointer"
+              href="#catalogo"
+              onclick="filterCategory('Protección Térmica & Frizz'); scrollToSection('catalogo', event)">
+              <div
+                class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+                <img class="w-full h-full object-cover" alt="Protección & Frizz"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSa-BTlp3Q7O_KxNsSR-nXdL0iue5uIcSmmKNB2S4Wo3xlhB4DxknLTl1IzIz9y81nW5T4pXm94zykzLaL5QwIU5pC-LODBZWgY09nAifj9EkakJQjy6iaMeh0NGgJ8_P4XQiA05aFkzNXnnfyO6UxnqLb69cwp_Tg3VwO7kwshjArRb8Vf1Qfwxqtol172yOFA3ZXdrRq_4O9FbMGGdQXnMtfLnNXh6siOsqS0RbSULw1xBHIadg" />
+              </div>
+              <span
+                class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Protección
+                &amp; Frizz</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Escudo anti-humedad</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3. CATÁLOGO ÚNICO PARA CONSUMIDOR FINAL -->
+      <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg"
+        id="catalogo">
+        <!-- Section Header -->
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+          <div class="flex flex-col gap-1">
+            <div class="flex items-center gap-space-xs text-secondary">
+              <span class="material-symbols-outlined text-[18px]">spa</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Tienda Oficial para
+                Ti</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Colección Capilar Crisselia</h2>
+          </div>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Precios finales con impuestos incluidos •
+            Entrega gratuita desde $RD 2,500</span>
+        </div>
+
+        <!-- Filter & Sort Control Panel -->
+        <div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+          <!-- Row 1: Tipo de Cabello -->
+          <div class="flex flex-col sm:flex-row sm:items-center gap-space-xs sm:gap-space-sm">
+            <span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant min-w-[130px] font-semibold">Tipo
+              de Cabello:</span>
+            <div class="flex flex-wrap items-center gap-1.5" id="filter-hair-type">
+              <button
+                class="px-3 py-1 rounded font-label-sm text-label-sm filter-btn active bg-primary text-on-primary cursor-pointer"
+                onclick="setHairTypeFilter('todos', this)">Todos</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setHairTypeFilter('liso', this)">Liso</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setHairTypeFilter('ondulado', this)">Ondulado</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setHairTypeFilter('rizado', this)">Rizado / Curly</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setHairTypeFilter('decolorado', this)">Decolorado / Teñido</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm filter-btn cursor-pointer"
+                onclick="setHairTypeFilter('seco', this)">Seco / Dañado</button>
+            </div>
+          </div>
+
+          <!-- Row 2: Necesidad Capilar / Colección -->
+          <div class="flex flex-col sm:flex-row sm:items-center gap-space-xs sm:gap-space-sm">
+            <span
+              class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant min-w-[130px] font-semibold">Necesidad
+              / Línea:</span>
+            <div class="flex flex-wrap items-center gap-1.5" id="filter-need">
+              <button
+                class="px-3 py-1 rounded font-label-sm text-label-sm need-btn active bg-secondary text-on-secondary cursor-pointer"
+                onclick="setNeedFilter('todos', this)">Todas las Necesidades</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setNeedFilter('hidratacion', this)">Hidratación</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setNeedFilter('plex', this)">Reparación Plex</button>
+              <button
+                class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface cursor-pointer"
+                onclick="setNeedFilter('antifrizz', this)">Anti-Frizz</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('brillo', this)">Brillo Espejo</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('rizos', this)">Definición de Rizos</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('kamila', this)">Línea Kamila</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('alejandra', this)">Línea Alejandra</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('nathalie', this)">Línea Nathalie</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('kristal', this)">Línea Kristal</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('liomi', this)">Línea Liomi</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('linea-negra', this)">Línea Negra</button>
+              <button
+                class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn cursor-pointer"
+                onclick="setNeedFilter('salon', this)">Salón / Galones</button>
+            </div>
+          </div>
+
+          <!-- Row 3: Sorting & Active Count -->
+          <div
+            class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/50 p-2.5 rounded">
+            <div class="flex items-center gap-2">
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Mostrando:</span>
+              <span class="font-label-sm text-label-sm font-bold text-primary" id="product-count">11 Fórmulas Exclusivas
+                B2C</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar por:</span>
+              <select
+                class="bg-surface-container-lowest text-on-surface text-label-sm font-label-sm px-2.5 py-1 rounded focus:outline-none focus:bg-surface-container cursor-pointer border border-outline-variant/40"
+                id="sort-select" onchange="sortProducts(this.value)">
+                <option value="populares">Más Vendidos</option>
+                <option value="novedades">Novedades</option>
+                <option value="precio-asc">Precio: Menor a Mayor</option>
+                <option value="precio-desc">Precio: Mayor a Menor</option>
+                <option value="rating">Mejor Valorados</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product Cards Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="products-grid">
+          <!-- 4. Gel Laceador (Pequeño - 8 oz / 240 ml) -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="gel-laceador-pequeno" data-title="Gel Laceador (Pequeño)" data-badge="nuevo"
+            data-need="antifrizz brillo" data-price="1500" data-rating="4.8" data-type="liso ondulado"
+            style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Gel Laceador Pequeño 8 oz 240 ml"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1WQ1dgYR1ZD_kNS7bvwgcyLyUuYR3pUE_7SYPCKQVPIo6JnNGMi7A7h78v52ednX15nAkdZu8QRCutRR1ot9UKZCUfNX-fmdDNHy3Hrzk7pA7KZ8a3ZSRARwrJkt3_qcENEzlW7F5tjGUwkutfka5YDRryZrR_ua-c1hsz46z2ly1YnqCjy1OV5W8YjwIgbtoHPlDVtdRrnc15Oecq5MKl2HoAEWfdIBKnWnrg5DmoXKmeSZCcEhQfnMA" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase rounded shadow-sm">8
+                  oz / 240 ml</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Gel Laceador Pequeño 8 oz', 1500, 'https://lh3.googleusercontent.com/aida/AEtjO1WQ1dgYR1ZD_kNS7bvwgcyLyUuYR3pUE_7SYPCKQVPIo6JnNGMi7A7h78v52ednX15nAkdZu8QRCutRR1ot9UKZCUfNX-fmdDNHy3Hrzk7pA7KZ8a3ZSRARwrJkt3_qcENEzlW7F5tjGUwkutfka5YDRryZrR_ua-c1hsz46z2ly1YnqCjy1OV5W8YjwIgbtoHPlDVtdRrnc15Oecq5MKl2HoAEWfdIBKnWnrg5DmoXKmeSZCcEhQfnMA', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Laceador
+                  Personal</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(89)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Gel Laceador (Pequeño)</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Formato práctico de 8 oz /
+                240 ml. Mantiene el peinado lacio, sedoso y sin frizz en todo momento.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">8
+                  oz / 240 ml</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Uso
+                  Diario</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 1,500</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Gel Laceador Pequeño 8 oz', '$RD 1,500', 'Laceador Personal', 'Extractos emolientes de brillo espejo con tacto ligero', 'https://lh3.googleusercontent.com/aida/AEtjO1WQ1dgYR1ZD_kNS7bvwgcyLyUuYR3pUE_7SYPCKQVPIo6JnNGMi7A7h78v52ednX15nAkdZu8QRCutRR1ot9UKZCUfNX-fmdDNHy3Hrzk7pA7KZ8a3ZSRARwrJkt3_qcENEzlW7F5tjGUwkutfka5YDRryZrR_ua-c1hsz46z2ly1YnqCjy1OV5W8YjwIgbtoHPlDVtdRrnc15Oecq5MKl2HoAEWfdIBKnWnrg5DmoXKmeSZCcEhQfnMA', 1500)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Gel Laceador Pequeño', 1500, 'https://lh3.googleusercontent.com/aida/AEtjO1WQ1dgYR1ZD_kNS7bvwgcyLyUuYR3pUE_7SYPCKQVPIo6JnNGMi7A7h78v52ednX15nAkdZu8QRCutRR1ot9UKZCUfNX-fmdDNHy3Hrzk7pA7KZ8a3ZSRARwrJkt3_qcENEzlW7F5tjGUwkutfka5YDRryZrR_ua-c1hsz46z2ly1YnqCjy1OV5W8YjwIgbtoHPlDVtdRrnc15Oecq5MKl2HoAEWfdIBKnWnrg5DmoXKmeSZCcEhQfnMA', '8 oz / 240 ml')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. Elixir Ventilatore Lozione -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="elixir-ventilatore" data-title="Elixir (Ventilatore Lozione)" data-badge="nuevo"
+            data-need="brillo hidratacion" data-price="900" data-rating="4.9" data-type="liso seco ondulado"
+            style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Elixir Ventilatore Lozione 200 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1XDhOQ5j6v-OHma9LK383aq0bt7Rkft-_23iX50roGGGhoj2-QCmVNL5NZemcHjs-vpZuEiNuJyaXSgi3MQXraB9gMOKmFBFTlTpYBxsMgHxO-dJZwbqaeS6vqpf3y_6IEZSZDuPctcLRTEfkqyzoYjaKf4RP5ZubnTiNVFt96YKWgceZx_dMJOwcI_QhkJQL6QXBluqZK2CZNk2aOtodJ3Soq9VwqprcaTul8LhQzDrAF_JlM_M_4a" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase rounded shadow-sm">200
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Elixir Ventilatore Lozione 200 ML', 900, 'https://lh3.googleusercontent.com/aida/AEtjO1XDhOQ5j6v-OHma9LK383aq0bt7Rkft-_23iX50roGGGhoj2-QCmVNL5NZemcHjs-vpZuEiNuJyaXSgi3MQXraB9gMOKmFBFTlTpYBxsMgHxO-dJZwbqaeS6vqpf3y_6IEZSZDuPctcLRTEfkqyzoYjaKf4RP5ZubnTiNVFt96YKWgceZx_dMJOwcI_QhkJQL6QXBluqZK2CZNk2aOtodJ3Soq9VwqprcaTul8LhQzDrAF_JlM_M_4a', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Lozione
+                  &amp; Desenredo</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(104)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Elixir (Ventilatore Lozione)</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Ventilatore Lozione (200
+                ML). Bruma acondicionadora de brillo acuático que desenreda al instante.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">200
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Ligero
+                  &amp; Sedoso</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 900</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Elixir Ventilatore Lozione 200 ML', '$RD 900', 'Lozione & Desenredo', 'Complejo acuático biomineral con agentes de brillo ultraligeros', 'https://lh3.googleusercontent.com/aida/AEtjO1XDhOQ5j6v-OHma9LK383aq0bt7Rkft-_23iX50roGGGhoj2-QCmVNL5NZemcHjs-vpZuEiNuJyaXSgi3MQXraB9gMOKmFBFTlTpYBxsMgHxO-dJZwbqaeS6vqpf3y_6IEZSZDuPctcLRTEfkqyzoYjaKf4RP5ZubnTiNVFt96YKWgceZx_dMJOwcI_QhkJQL6QXBluqZK2CZNk2aOtodJ3Soq9VwqprcaTul8LhQzDrAF_JlM_M_4a', 900)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Elixir Ventilatore Lozione', 900, 'https://lh3.googleusercontent.com/aida/AEtjO1XDhOQ5j6v-OHma9LK383aq0bt7Rkft-_23iX50roGGGhoj2-QCmVNL5NZemcHjs-vpZuEiNuJyaXSgi3MQXraB9gMOKmFBFTlTpYBxsMgHxO-dJZwbqaeS6vqpf3y_6IEZSZDuPctcLRTEfkqyzoYjaKf4RP5ZubnTiNVFt96YKWgceZx_dMJOwcI_QhkJQL6QXBluqZK2CZNk2aOtodJ3Soq9VwqprcaTul8LhQzDrAF_JlM_M_4a', '200 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. Cera Laceadora -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="cera-laceadora" data-title="Cera Laceadora" data-badge="oferta" data-need="antifrizz definicion"
+            data-price="1200" data-rating="4.9" data-type="liso rizado ondulado" style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Cera Laceadora 120 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1UnOUdEXd0_OzJMzIRrKmkhaklgmC_k14eLSMsVCUjv6c6x-PXGmMr7q7erQhCAJ8GZsWM4iGNcAObr3AvF-6nwbdpmd34I5uk48iwLbyrKbGO6C5CeWpXzjkJ3BXjFA5x5_3gVCyieqf9EyAuRmbDn3zGSLAuJKUE1T3KItE287-rZweWcC0vX_E1CNEzaY34n3Rzf_TNSRLBhAMMLvArw7NFCFbJrB8lo1TRUc3ZVgRHMUEluRiNn" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase rounded shadow-sm">120
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Cera Laceadora 120 ML', 1200, 'https://lh3.googleusercontent.com/aida/AEtjO1UnOUdEXd0_OzJMzIRrKmkhaklgmC_k14eLSMsVCUjv6c6x-PXGmMr7q7erQhCAJ8GZsWM4iGNcAObr3AvF-6nwbdpmd34I5uk48iwLbyrKbGO6C5CeWpXzjkJ3BXjFA5x5_3gVCyieqf9EyAuRmbDn3zGSLAuJKUE1T3KItE287-rZweWcC0vX_E1CNEzaY34n3Rzf_TNSRLBhAMMLvArw7NFCFbJrB8lo1TRUc3ZVgRHMUEluRiNn', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Control
+                  Sedoso</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(115)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Cera Laceadora</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Pomada alisadora y
+                moldeadora (120 ML). Acabado pulido sin residuos y definición sedosa.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">120
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Cero
+                  Residuos</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 1,200</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Cera Laceadora 120 ML', '$RD 1,200', 'Control Sedoso', 'Ceras naturales purificadas con agentes reflectantes de cristal', 'https://lh3.googleusercontent.com/aida/AEtjO1UnOUdEXd0_OzJMzIRrKmkhaklgmC_k14eLSMsVCUjv6c6x-PXGmMr7q7erQhCAJ8GZsWM4iGNcAObr3AvF-6nwbdpmd34I5uk48iwLbyrKbGO6C5CeWpXzjkJ3BXjFA5x5_3gVCyieqf9EyAuRmbDn3zGSLAuJKUE1T3KItE287-rZweWcC0vX_E1CNEzaY34n3Rzf_TNSRLBhAMMLvArw7NFCFbJrB8lo1TRUc3ZVgRHMUEluRiNn', 1200)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Cera Laceadora', 1200, 'https://lh3.googleusercontent.com/aida/AEtjO1UnOUdEXd0_OzJMzIRrKmkhaklgmC_k14eLSMsVCUjv6c6x-PXGmMr7q7erQhCAJ8GZsWM4iGNcAObr3AvF-6nwbdpmd34I5uk48iwLbyrKbGO6C5CeWpXzjkJ3BXjFA5x5_3gVCyieqf9EyAuRmbDn3zGSLAuJKUE1T3KItE287-rZweWcC0vX_E1CNEzaY34n3Rzf_TNSRLBhAMMLvArw7NFCFbJrB8lo1TRUc3ZVgRHMUEluRiNn', '120 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. Línea Completa -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="linea-completa" data-title="Línea Completa" data-badge="bestseller"
+            data-need="plex hidratacion brillo" data-price="4500" data-rating="5.0"
+            data-type="seco decolorado rizado liso ondulado" style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Línea Completa Nathalie / Kamila / Cristalina"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded shadow-sm">Kit
+                  4 Pasos</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Línea Completa 4 Pasos', 4500, 'https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Colección
+                  Completa</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">5.0</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(230)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Línea Completa</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Kit Completo: Shampoo
+                1000ml + Mascarilla 1000ml + Leaving 250ml + Gotas 100ml. El protocolo supremo.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">4
+                  Productos</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Ahorro
+                  Exclusivo</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 4,500</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Línea Completa 4 Pasos', '$RD 4,500', 'Colección Completa', 'Kit integral italiano: Cacao, queratina biomimética y aminoácidos de seda pura', 'https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ', 4500)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Línea Completa 4 Pasos', 4500, 'https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ', 'Kit 4 Productos')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. Shampoo -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="shampoo-reconstructor" data-title="Shampoo Reconstructor" data-badge="top"
+            data-need="hidratacion plex" data-price="950" data-rating="4.9" data-type="liso seco rizado decolorado"
+            style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Shampoo Reconstructor 1000 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1Vj2F-OSXyTFWgKbhsDK5jxBnjDYp4RWQVfLMoEPnmoAGY325kGgtldv0wafEySFnJ97nObKHPghZx3mEMMPNmwgGbJulz_pb-qA3DBcp_xyPsoNn0iceROv59iG6bYRrkkhmPC8UvL5U6Eb2i7ZttCaucLmbS6S-VRx5M4yz0pDmbzyTGLmBroO4fmj1uAAvinlNZ2760pVZGl6tW5Zov6XuMUuMEMIAbK7yt1rFQLTKRKTozhH0-0" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded shadow-sm">1000
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Shampoo Reconstructor 1000 ML', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1Vj2F-OSXyTFWgKbhsDK5jxBnjDYp4RWQVfLMoEPnmoAGY325kGgtldv0wafEySFnJ97nObKHPghZx3mEMMPNmwgGbJulz_pb-qA3DBcp_xyPsoNn0iceROv59iG6bYRrkkhmPC8UvL5U6Eb2i7ZttCaucLmbS6S-VRx5M4yz0pDmbzyTGLmBroO4fmj1uAAvinlNZ2760pVZGl6tW5Zov6XuMUuMEMIAbK7yt1rFQLTKRKTozhH0-0', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Lavado
+                  Reconstructor</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(195)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Shampoo Reconstructor</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Shampoo Reconstructor (1000
+                ML). Limpieza equilibrada que fortalece la fibra capilar desde el lavado.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">1000
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Sin
+                  Sal</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 950</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Shampoo Reconstructor 1000 ML', '$RD 950', 'Lavado Reconstructor', 'Extractos botánicos de cacao y fitocomplejos reconstructores', 'https://lh3.googleusercontent.com/aida/AEtjO1Vj2F-OSXyTFWgKbhsDK5jxBnjDYp4RWQVfLMoEPnmoAGY325kGgtldv0wafEySFnJ97nObKHPghZx3mEMMPNmwgGbJulz_pb-qA3DBcp_xyPsoNn0iceROv59iG6bYRrkkhmPC8UvL5U6Eb2i7ZttCaucLmbS6S-VRx5M4yz0pDmbzyTGLmBroO4fmj1uAAvinlNZ2760pVZGl6tW5Zov6XuMUuMEMIAbK7yt1rFQLTKRKTozhH0-0', 950)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Shampoo Reconstructor', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1Vj2F-OSXyTFWgKbhsDK5jxBnjDYp4RWQVfLMoEPnmoAGY325kGgtldv0wafEySFnJ97nObKHPghZx3mEMMPNmwgGbJulz_pb-qA3DBcp_xyPsoNn0iceROv59iG6bYRrkkhmPC8UvL5U6Eb2i7ZttCaucLmbS6S-VRx5M4yz0pDmbzyTGLmBroO4fmj1uAAvinlNZ2760pVZGl6tW5Zov6XuMUuMEMIAbK7yt1rFQLTKRKTozhH0-0', '1000 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. Mascarilla -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="mascarilla-reconstructora" data-title="Mascarilla Reconstructora" data-badge="bestseller"
+            data-need="plex hidratacion" data-price="1500" data-rating="5.0" data-type="seco decolorado rizado"
+            style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Mascarilla Reconstructora 1000 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1Xuzjgsb93tGp0q9avYt1blW2bZfCujeq2MZSe-t9ekeVSUWj7uvbU3MXjleR0RHXiL-ODiivTu3iCM5fArqhEY99N27xckRAgH2afgWt2KEgGg_ZVCZFsH_X94oAT7ytdZQkYR1Sitd9rwCCnDrOXM3P9UqBpo8IlcJmy9a8Ned9l15VFQy25WHT1H6BAfgggZSZe9sJPIvj8-X2U38lKtdi6Gj0G_y2ckx_RFRiShGAzS3l9IG1V4Gw" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded shadow-sm">1000
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Mascarilla Reconstructora 1000 ML', 1500, 'https://lh3.googleusercontent.com/aida/AEtjO1Xuzjgsb93tGp0q9avYt1blW2bZfCujeq2MZSe-t9ekeVSUWj7uvbU3MXjleR0RHXiL-ODiivTu3iCM5fArqhEY99N27xckRAgH2afgWt2KEgGg_ZVCZFsH_X94oAT7ytdZQkYR1Sitd9rwCCnDrOXM3P9UqBpo8IlcJmy9a8Ned9l15VFQy25WHT1H6BAfgggZSZe9sJPIvj8-X2U38lKtdi6Gj0G_y2ckx_RFRiShGAzS3l9IG1V4Gw', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span
+                  class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Regeneración
+                  Máxima</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">5.0</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(210)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Mascarilla Reconstructora</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Mascarilla Reconstructora
+                (1000 ML). Nutrición ultra-densa que renueva puntas y cutículas.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">1000
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Efecto
+                  Seda</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 1,500</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Mascarilla Reconstructora 1000 ML', '$RD 1,500', 'Regeneración Máxima', 'Seda pura concentrada con manteca de cacao y agentes biomiméticos', 'https://lh3.googleusercontent.com/aida/AEtjO1Xuzjgsb93tGp0q9avYt1blW2bZfCujeq2MZSe-t9ekeVSUWj7uvbU3MXjleR0RHXiL-ODiivTu3iCM5fArqhEY99N27xckRAgH2afgWt2KEgGg_ZVCZFsH_X94oAT7ytdZQkYR1Sitd9rwCCnDrOXM3P9UqBpo8IlcJmy9a8Ned9l15VFQy25WHT1H6BAfgggZSZe9sJPIvj8-X2U38lKtdi6Gj0G_y2ckx_RFRiShGAzS3l9IG1V4Gw', 1500)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Mascarilla Reconstructora', 1500, 'https://lh3.googleusercontent.com/aida/AEtjO1Xuzjgsb93tGp0q9avYt1blW2bZfCujeq2MZSe-t9ekeVSUWj7uvbU3MXjleR0RHXiL-ODiivTu3iCM5fArqhEY99N27xckRAgH2afgWt2KEgGg_ZVCZFsH_X94oAT7ytdZQkYR1Sitd9rwCCnDrOXM3P9UqBpo8IlcJmy9a8Ned9l15VFQy25WHT1H6BAfgggZSZe9sJPIvj8-X2U38lKtdi6Gj0G_y2ckx_RFRiShGAzS3l9IG1V4Gw', '1000 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 10. Leaving -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="leaving-conditioner" data-title="Leaving (Acondicionador Sin Enjuague)" data-badge="nuevo"
+            data-need="antifrizz hidratacion" data-price="900" data-rating="4.9" data-type="liso seco rizado ondulado"
+            style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Leaving - Leave-in Acondicionador 250 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1Xntp1O2X6oDmsdIQ4LxGjzHQBbrv1DbowAg2rKkHmjEN7VVz_7YGacyZQ-w-J5IPgONVrP6cmmgK2lqGzJosL_z5G5lYaeZx4BNosEwg7PhcBD4uw8hyhNIebN8Cd-xU2JsosIxh9i5i6QOU_5I4OhJ9lCFMVa18ib6o5kf0Guiv7QiXFYp7WGN-2v8li6GFUgMVhXkh5nqrnB60zPv80JmcN8H4A5aLFwSlplKmJMRoGX0TTCZR38oA" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase rounded shadow-sm">250
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Leaving 250 ML', 900, 'https://lh3.googleusercontent.com/aida/AEtjO1Xntp1O2X6oDmsdIQ4LxGjzHQBbrv1DbowAg2rKkHmjEN7VVz_7YGacyZQ-w-J5IPgONVrP6cmmgK2lqGzJosL_z5G5lYaeZx4BNosEwg7PhcBD4uw8hyhNIebN8Cd-xU2JsosIxh9i5i6QOU_5I4OhJ9lCFMVa18ib6o5kf0Guiv7QiXFYp7WGN-2v8li6GFUgMVhXkh5nqrnB60zPv80JmcN8H4A5aLFwSlplKmJMRoGX0TTCZR38oA', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span
+                  class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Acondicionador
+                  Sin Enjuague</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(140)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Leaving</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Leave-in Acondicionador
+                (250 ML). Protección continua térmica, ligereza y suavidad inmediata.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">250
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Sin
+                  Enjuague</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 900</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Leaving 250 ML', '$RD 900', 'Acondicionador Sin Enjuague', 'Proteínas de seda líquida + filtro UV botánico sellador', 'https://lh3.googleusercontent.com/aida/AEtjO1Xntp1O2X6oDmsdIQ4LxGjzHQBbrv1DbowAg2rKkHmjEN7VVz_7YGacyZQ-w-J5IPgONVrP6cmmgK2lqGzJosL_z5G5lYaeZx4BNosEwg7PhcBD4uw8hyhNIebN8Cd-xU2JsosIxh9i5i6QOU_5I4OhJ9lCFMVa18ib6o5kf0Guiv7QiXFYp7WGN-2v8li6GFUgMVhXkh5nqrnB60zPv80JmcN8H4A5aLFwSlplKmJMRoGX0TTCZR38oA', 900)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Leaving 250 ML', 900, 'https://lh3.googleusercontent.com/aida/AEtjO1Xntp1O2X6oDmsdIQ4LxGjzHQBbrv1DbowAg2rKkHmjEN7VVz_7YGacyZQ-w-J5IPgONVrP6cmmgK2lqGzJosL_z5G5lYaeZx4BNosEwg7PhcBD4uw8hyhNIebN8Cd-xU2JsosIxh9i5i6QOU_5I4OhJ9lCFMVa18ib6o5kf0Guiv7QiXFYp7WGN-2v8li6GFUgMVhXkh5nqrnB60zPv80JmcN8H4A5aLFwSlplKmJMRoGX0TTCZR38oA', '250 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- 11. Gotas -->
+          <div
+            class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
+            data-id="gotas-de-seda" data-title="Gotas de Seda" data-badge="top" data-need="brillo antifrizz"
+            data-price="950" data-rating="5.0" data-type="liso seco rizado ondulado" style="display: flex;">
+            <div>
+              <div
+                class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm flex items-center justify-center p-2">
+                <img alt="Gotas de Seda / Fluid Crystal 100 ML"
+                  class="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1WM2ETjdfetoIDrhv_xGrgso4rSG6W5v-lDwORmS_rvWaeJF_XtedR2XUX0D5-WFCw5gGF2s2xQMQf1FESstVel5pL8GEyVd-xxGLWPF8RvO5Tg7UFZBCmejVmt3qUcZ6rhKhVN0Yox8-bsDm5vsAVApldFrnEn10Y9a6xpVJkttESPyjRPm91I5pUR_5adgeAi0BGF0HcNbxVztfUDNQ-sQxl8u3LUzP_UUohqKmexLhkvawXpVxIw" />
+                <span
+                  class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded shadow-sm">100
+                  ML</span>
+                <button aria-label="Añadir a favoritos"
+                  class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm wishlist-btn"
+                  onclick="toggleWishlist('Gotas de Seda 100 ML', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1WM2ETjdfetoIDrhv_xGrgso4rSG6W5v-lDwORmS_rvWaeJF_XtedR2XUX0D5-WFCw5gGF2s2xQMQf1FESstVel5pL8GEyVd-xxGLWPF8RvO5Tg7UFZBCmejVmt3qUcZ6rhKhVN0Yox8-bsDm5vsAVApldFrnEn10Y9a6xpVJkttESPyjRPm91I5pUR_5adgeAi0BGF0HcNbxVztfUDNQ-sQxl8u3LUzP_UUohqKmexLhkvawXpVxIw', this)">
+                  <span class="material-symbols-outlined text-[18px]">favorite</span>
+                </button>
+              </div>
+              <div class="flex items-center justify-between gap-1 mb-1">
+                <span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Sérum de
+                  Brillo</span>
+                <div class="flex items-center gap-1">
+                  <span class="material-symbols-outlined text-amber-500 text-[14px]"
+                    style="font-variation-settings: 'FILL' 1;">star</span>
+                  <span class="font-label-sm text-label-sm text-on-surface font-bold">5.0</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">(175)</span>
+                </div>
+              </div>
+              <h3
+                class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">
+                Gotas de Seda</h3>
+              <p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">Gotas de Seda / Fluid
+                Crystal (100 ML). Brillo cristalino instantáneo y sellador de puntas abiertas.</p>
+              <div class="mt-3 flex flex-wrap gap-1">
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">100
+                  ML</span>
+                <span
+                  class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Brillo
+                  Espejo</span>
+              </div>
+            </div>
+            <div
+              class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+              <div>
+                <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP
+                  B2C</span>
+                <span class="font-title-lg text-title-lg text-primary font-bold">$RD 950</span>
+              </div>
+              <div class="flex items-center gap-1.5">
+                <button
+                  class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors cursor-pointer"
+                  onclick="openProductModal('Gotas de Seda 100 ML', '$RD 950', 'Sérum de Brillo', 'Gotas de seda pura cristalina micronizada con filtro térmico', 'https://lh3.googleusercontent.com/aida/AEtjO1WM2ETjdfetoIDrhv_xGrgso4rSG6W5v-lDwORmS_rvWaeJF_XtedR2XUX0D5-WFCw5gGF2s2xQMQf1FESstVel5pL8GEyVd-xxGLWPF8RvO5Tg7UFZBCmejVmt3qUcZ6rhKhVN0Yox8-bsDm5vsAVApldFrnEn10Y9a6xpVJkttESPyjRPm91I5pUR_5adgeAi0BGF0HcNbxVztfUDNQ-sQxl8u3LUzP_UUohqKmexLhkvawXpVxIw', 950)">Detalle</button>
+                <button
+                  class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm cursor-pointer"
+                  onclick="quickAddToCart('Gotas de Seda', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1WM2ETjdfetoIDrhv_xGrgso4rSG6W5v-lDwORmS_rvWaeJF_XtedR2XUX0D5-WFCw5gGF2s2xQMQf1FESstVel5pL8GEyVd-xxGLWPF8RvO5Tg7UFZBCmejVmt3qUcZ6rhKhVN0Yox8-bsDm5vsAVApldFrnEn10Y9a6xpVJkttESPyjRPm91I5pUR_5adgeAi0BGF0HcNbxVztfUDNQ-sQxl8u3LUzP_UUohqKmexLhkvawXpVxIw', '100 ML')">
+                  <span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+                  <span>Añadir</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. MODAL / PÁGINA DE DETALLE INTERACTIVA -->
+      <div class="fixed inset-0 z-50 bg-inverse-surface/60 backdrop-blur-sm items-center justify-center p-4 hidden"
+        id="product-detail-modal" onclick="handleModalBackdropClick(event)">
+        <div
+          class="relative w-full max-w-4xl bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col md:flex-row"
+          onclick="event.stopPropagation()">
+          <!-- Close Button -->
+          <button
+            class="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-surface-container-low hover:bg-surface-container flex items-center justify-center text-on-surface transition-colors cursor-pointer"
+            onclick="closeProductModal()" aria-label="Cerrar ventana">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+          </button>
+
+          <!-- Left Gallery Preview -->
+          <div class="w-full md:w-1/2 p-space-md bg-surface-container-low flex flex-col justify-between">
+            <div
+              class="relative w-full aspect-square rounded overflow-hidden bg-surface-container-lowest shadow-inner mb-space-sm flex items-center justify-center p-2">
+              <img class="w-full h-full object-contain transition-all duration-300" id="modal-main-img"
+                alt="Producto detalle"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaBI_D7IiBzQqK3H9ymDKFCJDpqmvWgptvz4JOKQ3b_r6xI2MNBwrcU33_7Y2tc5r132mcYHolKU7K6OkejwcPmirW1KOjDi8UP-OhxgaOCnXioQXVx0NFlErzfPagrJjcje92xtEctcsyHm4B0jgMOt6eEw1Yl6lwUeVHjVv3gijA65eRog9JErNsKmBlOxqNmSMGKneYZYY6jhs3TtsmedF6uA5jA8-U6IXJ6i_ACOf3fY-OUx8"
+                style="opacity: 1;" />
+              <span
+                class="absolute bottom-3 left-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded font-label-sm text-label-sm text-primary font-bold shadow-sm">
+                Fórmula Original Italiana
+              </span>
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <button
+                class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity bg-white p-1 cursor-pointer border border-outline-variant/30"
+                onclick="setModalThumb(1, this)">
+                <img class="w-full h-full object-contain" alt="Vista 1" id="modal-thumb-1"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1WpakGn3dmVB7gA8vATi9yzHYyzQD6vF8cQBTPKL_v3bxRKWbyiyoerxMF77ucMvPwqTVRiLG1C7egVcgVVqor2LlkMACE7Mf8J0TTcMysdYLhNfpM1JcdalHOFI-Iu-fr6Qv4xyqTdymVr0cn9B6D_z_qwzRX4v-qBn68ZIY4fzVE8EQFNINdqcg1S2BJvYT8V3e0odFqWy0d58jWnizsTMfcjTEOWjpuEgCsp8B2LqN4k9LagphNrMw" />
+              </button>
+              <button
+                class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity bg-white p-1 cursor-pointer border border-outline-variant/30"
+                onclick="setModalThumb(2, this)">
+                <img class="w-full h-full object-cover" alt="Vista textura"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAfTU0Dc6ey26LrEvcAZ_DFYOvWuG5UsbCdXhk7GmD1rB9xp8yJEH7Q_XSzLo5Ftv3U2rbv9OPRivi9L262Gi7iCI5NbkwYIlH2myxhXATtbkDqIza305iIV5bgwe5NxV7YVYv6_Tp3fc8X2-1hxjNvT108eNoIF6lmEJ_j23j4o2-tuD0v-DpzDRiRdYXBpPMS5q7zjvkqsvxhLgx7yvct79ZJO4xEmAFud8YcBLpy0cMZLkus7Sk" />
+              </button>
+              <button
+                class="aspect-square rounded overflow-hidden shadow-sm hover:opacity-90 transition-opacity bg-white p-1 cursor-pointer border border-outline-variant/30"
+                onclick="setModalThumb(3, this)">
+                <img class="w-full h-full object-cover" alt="Vista ingredientes"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBg6ud4Yk_v3v5kRQxkkyMLGdSTlkPiGlX103aH0k5MSFLQSYRG4QymYUDNrjLef0sZlqlsLWafos2IaovN_icUEwyuljt2P-7bm3j_b2E5Tljj4pfDhMo78DQi5y8tXUa7Ot8ox6cHZl2Etv0c7HXuJ-VHh06g1agLkxUIXhPyjKW1qrkox7JQs9QV6ndCgrS4dKNZby_voAM3j7t8yi3d0MnHHET4e_fiugA08az-mt4n1fi3D_Y" />
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Details & Actions -->
+          <div
+            class="w-full md:w-1/2 p-space-lg overflow-y-auto max-h-[85vh] flex flex-col justify-between gap-space-md">
+            <div class="flex flex-col gap-space-xs">
+              <div class="flex items-center gap-2">
+                <span class="font-label-sm text-label-sm text-secondary uppercase font-semibold" id="modal-badge">Elixir
+                  de Acabado</span>
+                <span class="w-1 h-1 rounded-full bg-outline-variant"></span>
+                <span class="font-label-sm text-label-sm text-emerald-700 font-semibold flex items-center gap-0.5">
+                  <span class="material-symbols-outlined text-[14px]">check_circle</span> En stock (Entrega 24/48h)
+                </span>
+              </div>
+              <h2 class="font-headline-md text-headline-md text-primary leading-tight" id="modal-title">Diamond Elixir
+                Sérum Capilar Sublime</h2>
+              <div class="flex items-center gap-3 py-1">
+                <span class="font-display-lg-mobile text-display-lg-mobile text-primary font-bold" id="modal-price">$RD
+                  950</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant">PVP consumidor (IVA incl.)</span>
+              </div>
+
+              <!-- Active Ingredients Box -->
+              <div class="p-3 rounded bg-surface-container-low flex flex-col gap-1">
+                <span class="font-label-sm text-label-sm text-primary font-bold">Ingredientes Activos
+                  Biomoleculares:</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant" id="modal-ingredients">Gotas de Diamante +
+                  Camelia blanca + Tocoferol puro</p>
+              </div>
+
+              <!-- Size Selector -->
+              <div class="flex flex-col gap-1 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Seleccionar
+                  Formato:</span>
+                <div class="flex items-center gap-2" id="modal-size-container">
+                  <button
+                    class="px-3.5 py-1.5 rounded font-label-sm text-label-sm size-btn font-semibold bg-primary text-on-primary cursor-pointer"
+                    onclick="selectSize(this, 'Estándar', currentModalBasePrice)">Estándar</button>
+                  <button
+                    class="px-3.5 py-1.5 rounded bg-surface-container-low text-on-surface font-label-sm text-label-sm size-btn hover:bg-surface-container cursor-pointer"
+                    onclick="selectSize(this, 'Profesional Max', Math.round(currentModalBasePrice * 1.6))">Profesional
+                    Max (Ahorro 20%)</button>
+                </div>
+              </div>
+
+              <!-- Quantity Selector -->
+              <div class="flex items-center gap-3 pt-1">
+                <span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Cantidad:</span>
+                <div class="flex items-center bg-surface-container-low rounded border border-outline-variant/30">
+                  <button
+                    class="w-8 h-8 flex items-center justify-center text-primary font-bold hover:bg-surface-container cursor-pointer"
+                    onclick="updateQty(-1)">-</button>
+                  <span class="w-8 text-center font-label-sm text-label-sm font-bold text-primary"
+                    id="modal-qty">1</span>
+                  <button
+                    class="w-8 h-8 flex items-center justify-center text-primary font-bold hover:bg-surface-container cursor-pointer"
+                    onclick="updateQty(1)">+</button>
+                </div>
+              </div>
+
+              <!-- Usage Instructions Accordion preview -->
+              <div class="pt-2 flex flex-col gap-1.5">
+                <span class="font-label-sm text-label-sm text-primary font-bold">Modo de Uso Sugerido:</span>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Tras lavar el cabello con champú sin sal, retirar exceso de humedad con toalla de microfibra. Aplicar
+                  de medios a puntas, masajear mecha a mecha durante 1 minuto, dejar actuar 5-10 minutos y aclarar con
+                  agua tibia.
+                </p>
+              </div>
+            </div>
+
+            <!-- Action Buttons & Guarantees -->
+            <div class="flex flex-col gap-space-xs pt-space-sm">
+              <div class="grid grid-cols-2 gap-2">
+                <button
+                  class="py-3 bg-secondary text-on-secondary rounded font-label-lg text-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                  onclick="confirmAddToCart()">
+                  <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+                  <span>Añadir al Carrito</span>
+                </button>
+                <button
+                  class="py-3 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-colors flex items-center justify-center gap-1.5 shadow-sm cursor-pointer"
+                  onclick="buyNowDirect()">
+                  <span>Comprar Ahora</span>
+                </button>
+              </div>
+
+              <!-- Trust bullets -->
+              <div class="flex items-center justify-between text-on-surface-variant pt-2 text-[12px] font-label-sm">
+                <span class="flex items-center gap-1"><span
+                    class="material-symbols-outlined text-[15px] text-secondary">local_shipping</span> Envío Gratis &gt;
+                  $RD 2,500</span>
+                <span class="flex items-center gap-1"><span
+                    class="material-symbols-outlined text-[15px] text-secondary">featured_seasonal_and_gifts</span>
+                  Muestra de regalo incluida</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. NOVEDADES & PRODUCTOS MÁS VENDIDOS (Editorial Split Showcase) -->
+      <section class="w-full bg-surface-container-low py-space-xl" id="mas-vendidos">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+          <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+            <div>
+              <span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Favoritos
+                de Nuestras Clientas</span>
+              <h2 class="font-headline-lg text-headline-lg text-primary mt-1">Más Vendidos &amp; Novedades</h2>
+            </div>
+            <a class="font-label-lg text-label-lg text-secondary hover:text-primary flex items-center gap-1 transition-colors"
+              href="#catalogo" onclick="scrollToSection('catalogo', event)">
+              <span>Ver toda la colección</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+
+          <!-- Bento Grid of Highlighted B2C Products -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-space-md items-stretch">
+            <!-- Large Featured Bento (Left) -->
+            <div
+              class="md:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg flex flex-col justify-between shadow-sm relative overflow-hidden">
+              <div class="flex flex-col gap-space-xs z-10">
+                <span
+                  class="px-3 py-1 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm w-max uppercase tracking-wider">
+                  Promoción Exclusiva
+                </span>
+                <h3 class="font-headline-lg text-headline-lg text-primary max-w-md mt-2">
+                  ¡Bolso de línea gratis!
+                </h3>
+                <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                  Recibe un bolso de línea totalmente gratis por la compra de 3 productos o más en cualquier pedido.
+                </p>
+              </div>
+              <div
+                class="my-space-md w-full h-56 rounded overflow-hidden bg-surface-container-low relative flex items-center justify-center p-2">
+                <img alt="Bolso de línea Crisselia" class="w-full h-full object-contain"
+                  src="https://lh3.googleusercontent.com/aida/AEtjO1VnalYAj54RykiNjVLzdmaxx57Gh9zCPAn4Onc1qFvdZ6j49K5eqe3YORyrjfWwhbLNCwMJirn9e2AcaArHVi97l5P9FKUU49U4q06V8vwKxYQ2OzWc-woqjS--vB3O_jolEYLFdsfS4o6hcUTycyDrP-xzzhqdFOW3QwYs87Yc9c47l5ynp79zeqIh4JE8pUd8y_w6NXrDJRkI33vsLDFuwMXzSK_QbXR3KcN8-46CEHGF0sK-qMveEg" />
+              </div>
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm z-10">
+                <div>
+                  <span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">Regalo
+                    por tu compra</span>
+                  <div class="flex items-baseline gap-2">
+                    <span class="font-headline-md text-headline-md text-secondary font-bold">Gratis</span>
+                    <span class="font-body-sm text-body-sm text-on-surface-variant">En pedidos de 3+ unidades</span>
+                  </div>
+                </div>
+                <a class="px-6 py-3 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm flex items-center justify-center gap-2 cursor-pointer"
+                  href="#catalogo" onclick="scrollToSection('catalogo', event)">
+                  <span class="material-symbols-outlined text-[18px]">redeem</span>
+                  <span>Aprovechar Promoción</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Right Stack Bento (Right) -->
+            <div class="md:col-span-5 flex flex-col gap-space-md">
+              <!-- Bento Small 1 -->
+              <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+                <div
+                  class="w-24 h-24 rounded overflow-hidden bg-surface-container-low shrink-0 flex items-center justify-center p-1">
+                  <img class="w-full h-full object-cover" alt="Diamond Elixir Sérum"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1XxlHQWygECdJSaaLzQJQpm5YMHOjpJ2iOGlJEjhL7wKTpWpbg-uGi9rlP8hJ8fZ1VUzbgebXGe0AxMoERRYyk1ST_YBovWyeHcefRQJ9ZaR7nAQ2cZrRbDYq0VrEG_iqWDIfyuMzRgIlvwyEiMoMKWVsZqzDl5Dr9_8XrBmu_nAfE5cEHg0DLKVoBdDieY22YKuf7EFVhEiGO5QmA061S-45mzz2GnSfL9kSGPvATzhJL2mVO4OknM9Q" />
+                </div>
+                <div class="flex flex-col justify-between flex-1">
+                  <div>
+                    <span class="font-label-sm text-[10px] text-secondary uppercase font-semibold">Puntas
+                      Abiertas</span>
+                    <h4 class="font-title-md text-title-md text-primary">Diamond Elixir Sérum</h4>
+                    <div class="flex items-center gap-1 mt-0.5">
+                      <span class="material-symbols-outlined text-amber-500 text-[13px]"
+                        style='font-variation-settings: "FILL" 1;'>star</span>
+                      <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                      <span class="font-label-sm text-[11px] text-on-surface-variant">(180 compras)</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="font-title-md text-title-md text-primary font-bold">$RD 950</span>
+                    <button
+                      class="px-3 py-1 bg-secondary text-on-secondary rounded font-label-sm text-label-sm hover:bg-secondary-container transition-colors cursor-pointer"
+                      onclick="quickAddToCart('Diamond Elixir Sérum', 950, 'https://lh3.googleusercontent.com/aida/AEtjO1XxlHQWygECdJSaaLzQJQpm5YMHOjpJ2iOGlJEjhL7wKTpWpbg-uGi9rlP8hJ8fZ1VUzbgebXGe0AxMoERRYyk1ST_YBovWyeHcefRQJ9ZaR7nAQ2cZrRbDYq0VrEG_iqWDIfyuMzRgIlvwyEiMoMKWVsZqzDl5Dr9_8XrBmu_nAfE5cEHg0DLKVoBdDieY22YKuf7EFVhEiGO5QmA061S-45mzz2GnSfL9kSGPvATzhJL2mVO4OknM9Q', '100 ml')">
+                      Añadir
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bento Small 2 -->
+              <div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex items-center gap-space-md">
+                <div
+                  class="w-24 h-24 rounded overflow-hidden bg-surface-container-low shrink-0 flex items-center justify-center p-1">
+                  <img class="w-full h-full object-cover" alt="Sublime Curl Crema"
+                    src="https://lh3.googleusercontent.com/aida/AEtjO1Vrl1nHjKT4aLslv6pO-cYqh3biPrGcEzG0Bx0DmwV4OZ53YERFo8O1cDfOQdvjDjpi3bksyCCkdzx-UHZGh-TqMxAoYJjyuMZzVchd089aKssvp63J5rp8ZwxE6pWD8APGZVQO8NIeZCOGfzi13yRyPKtLoCgCjVycokEnAGIV5k3bmE83ALafi_xSa4WIk7MyM_f8fZXmcIKPWVkhwh9OYeSi9L5VXtp5s5EyFofqynty1H5C3wonHg" />
+                </div>
+                <div class="flex flex-col justify-between flex-1">
+                  <div>
+                    <span class="font-label-sm text-[10px] text-secondary uppercase font-semibold">Rizos &amp;
+                      Ondas</span>
+                    <h4 class="font-title-md text-title-md text-primary">Sublime Curl Crema</h4>
+                    <div class="flex items-center gap-1 mt-0.5">
+                      <span class="material-symbols-outlined text-amber-500 text-[13px]"
+                        style='font-variation-settings: "FILL" 1;'>star</span>
+                      <span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+                      <span class="font-label-sm text-[11px] text-on-surface-variant">(115 compras)</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between mt-2">
+                    <span class="font-title-md text-title-md text-primary font-bold">$RD 1,200</span>
+                    <button
+                      class="px-3 py-1 bg-secondary text-on-secondary rounded font-label-sm text-label-sm hover:bg-secondary-container transition-colors cursor-pointer"
+                      onclick="quickAddToCart('Sublime Curl Crema', 1200, 'https://lh3.googleusercontent.com/aida/AEtjO1Vrl1nHjKT4aLslv6pO-cYqh3biPrGcEzG0Bx0DmwV4OZ53YERFo8O1cDfOQdvjDjpi3bksyCCkdzx-UHZGh-TqMxAoYJjyuMZzVchd089aKssvp63J5rp8ZwxE6pWD8APGZVQO8NIeZCOGfzi13yRyPKtLoCgCjVycokEnAGIV5k3bmE83ALafi_xSa4WIk7MyM_f8fZXmcIKPWVkhwh9OYeSi9L5VXtp5s5EyFofqynty1H5C3wonHg', '250 ml')">
+                      Añadir
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Real Customer Highlight Card -->
+              <div class="p-space-md rounded-xl bg-surface-container-high/60 flex flex-col gap-2">
+                <div class="flex items-center gap-2">
+                  <span class="material-symbols-outlined text-secondary text-[20px]">format_quote</span>
+                  <span class="font-label-sm text-label-sm font-semibold text-primary">Opinión verificada de
+                    cliente</span>
+                </div>
+                <p class="font-body-sm text-body-sm text-on-surface-variant italic">
+                  "Mi pelo decolorado pasó de parecer paja seca a tener un brillo de espejo increíble con la mascarilla
+                  de seda y el sérum. Vale cada centavo."
+                </p>
+                <div class="flex items-center justify-between text-on-surface text-[12px] font-label-sm mt-1">
+                  <span>— Laura Morales, Madrid</span>
+                  <span class="text-emerald-700 font-semibold">Compra Verificada B2C</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. DIAGNÓSTICO CAPILAR EXPRESS (60 Segundos) -->
+      <section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl" id="diagnostico">
+        <div
+          class="w-full bg-gradient-to-br from-primary via-primary-container to-secondary rounded-2xl p-space-lg lg:p-space-xl text-on-primary relative overflow-hidden shadow-xl">
+          <!-- Decorative Backdrop Circles -->
+          <div
+            class="absolute -right-20 -bottom-20 w-80 h-80 rounded-full bg-tertiary-fixed-dim/10 blur-2xl pointer-events-none">
+          </div>
+          <div
+            class="absolute -left-10 -top-10 w-60 h-60 rounded-full bg-secondary-fixed/10 blur-2xl pointer-events-none">
+          </div>
+
+          <div class="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center gap-space-md">
+            <div
+              class="inline-flex items-center gap-space-xs px-3 py-1 rounded-full bg-surface-container-lowest/15 backdrop-blur-md">
+              <span class="material-symbols-outlined text-tertiary-fixed text-[16px]">psychology</span>
+              <span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary-fixed">Test Personalizado
+                en 60 Segundos</span>
+            </div>
+            <h2 class="font-headline-lg text-headline-lg-mobile lg:text-headline-lg font-title-lg">
+              Encuentra la Rutina Exacta Para Tu Cabello
+            </h2>
+            <p class="font-body-md text-body-md text-on-primary/80 max-w-xl">
+              Responde estas dos breves preguntas y nuestro formulador botánico te sugerirá la combinación perfecta con
+              un 15% de descuento exclusivo para consumidor final.
+            </p>
+
+            <!-- Interactive Quiz Container -->
+            <div
+              class="w-full bg-surface-container-lowest text-on-surface rounded-xl p-space-md lg:p-space-lg shadow-xl text-left flex flex-col gap-space-md mt-space-xs">
+              <!-- Step 1 -->
+              <div class="flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Paso 1 de 2:
+                  ¿Cómo describirías la textura de tu cabello?</span>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2" id="quiz-texture-options">
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-texture cursor-pointer"
+                    onclick="selectQuizOption('texture', 'liso', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Liso</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Fino o con tendencia a perder
+                      volumen</span>
+                  </button>
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-texture cursor-pointer"
+                    onclick="selectQuizOption('texture', 'ondulado', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Ondulado</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Ondas sueltas con algo de
+                      encrespamiento</span>
+                  </button>
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-texture cursor-pointer"
+                    onclick="selectQuizOption('texture', 'rizado', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Rizado / Curly</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Espirales que demandan
+                      nutrición</span>
+                  </button>
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-texture cursor-pointer"
+                    onclick="selectQuizOption('texture', 'procesado', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Decolorado</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Tratamientos de mechas o color
+                      constante</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div class="flex flex-col gap-2">
+                <span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-bold">Paso 2 de 2:
+                  ¿Cuál es tu mayor preocupación hoy?</span>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2" id="quiz-concern-options">
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-concern cursor-pointer"
+                    onclick="selectQuizOption('concern', 'danio', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Rotura &amp; Sequedad Extrema</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Puntas abiertas y aspecto
+                      frágil</span>
+                  </button>
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-concern cursor-pointer"
+                    onclick="selectQuizOption('concern', 'frizz', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Frizz &amp; Falta de Brillo</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Efecto esponjoso con la
+                      humedad</span>
+                  </button>
+                  <button
+                    class="p-3 rounded bg-surface-container-low hover:bg-surface-container text-left transition-colors quiz-opt-concern cursor-pointer"
+                    onclick="selectQuizOption('concern', 'definicion', this)">
+                    <span class="font-label-lg text-label-lg block text-primary">Definición &amp; Hidratación</span>
+                    <span class="font-body-sm text-[11px] text-on-surface-variant">Bucles sin forma y ásperos</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Result Presentation Box -->
+              <div
+                class="hidden p-space-md rounded-lg bg-surface-container-low flex flex-col md:flex-row items-center justify-between gap-space-md border border-secondary/20"
+                id="quiz-result-card">
+                <div class="flex items-center gap-space-sm">
+                  <div
+                    class="w-16 h-16 rounded overflow-hidden bg-surface-container-lowest shrink-0 p-1 flex items-center justify-center">
+                    <img class="w-full h-full object-contain" id="quiz-rec-img" alt="Rutina recomendada"
+                      src="https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ" />
+                  </div>
+                  <div class="flex flex-col">
+                    <span class="font-label-sm text-[10px] text-secondary uppercase font-bold">Tu Rutina
+                      Recomendada</span>
+                    <h4 class="font-title-md text-title-md text-primary" id="quiz-rec-title">Ritual Sublime Cellular
+                      Repair + Elixir</h4>
+                    <p class="font-body-sm text-body-sm text-on-surface-variant" id="quiz-rec-desc">Restauración
+                      profunda de enlaces capilares y sellado de cutícula reflectante.</p>
+                  </div>
+                </div>
+                <div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+                  <div class="text-right">
+                    <span class="font-label-sm text-[10px] text-on-surface-variant line-through">$RD 4,500</span>
+                    <span class="font-title-lg text-title-lg text-primary font-bold block" id="quiz-rec-price">$RD
+                      3,825</span>
+                  </div>
+                  <button
+                    class="px-5 py-2.5 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm cursor-pointer"
+                    onclick="addQuizRecommendationToCart()">
+                    Añadir con -15%
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. TESTIMONIOS DE CLIENTAS REALES & RESULTADOS -->
+      <section class="w-full bg-surface-container-lowest py-space-xl" id="testimonios">
+        <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-xl">
+          <div class="text-center max-w-2xl mx-auto flex flex-col gap-1">
+            <span
+              class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Transformaciones
+              Auténticas</span>
+            <h2 class="font-headline-lg text-headline-lg text-primary">Lo Que Dicen Quienes Ya Cuidan Su Cabello Con
+              Crisselia</h2>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">
+              Más de 14,000 consumidoras han recuperado la luminosidad y vitalidad de su melena.
+            </p>
+          </div>
+
+          <!-- Testimonial Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+            <!-- Review 1 -->
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                </div>
+                <h4 class="font-title-md text-title-md text-primary">"Salva el cabello decolorado sin dudarlo"</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Llevo años tiñéndome de rubio platino y las puntas siempre se me partían al peinarme. Desde la primera
+                  aplicación de la Mascarilla Reconstructora noté la hebra flexible y con cuerpo. No la cambio por nada.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+                  <img class="w-full h-full object-cover" alt="Sofía Benítez"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJG9-Iobu8U0c66O_mjugSZWiW9HdkTnz6_4wmwJLxgpKpIM-c2naTZVgM14xVsCRQLW7ictosec0G-JSYiXXwuxTVGlzsu4ckgz-V5rJrhC-dv0AdXpsIc37EJq-63xRh5MinWDPVLtokUDDr7VDqHa3K7WHQIkX9IIx-xYOoxXhuZkc4NAZklSgWn9JDOTVsZplOSZ2cGNenHXOcRtGGr1b5Z1CBdRO7WP9wiJhmywZiiemz6pY" />
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Sofía Benítez</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">Compra verificada • Mascarilla de
+                    Seda</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                </div>
+                <h4 class="font-title-md text-title-md text-primary">"Rizos ultra elásticos y cero acartonados"</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  La crema Sublime Curl fue un descubrimiento absoluto para mi rutina curly. El rizo queda definido,
+                  brillante, suave al tacto y aguanta la humedad sin inflarse como un león.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+                  <img class="w-full h-full object-cover" alt="Valentina Rossi"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS76Od7h49r0VMLO3Una06Ms1hc903hMRFrl4aKq5BMINTRJjrCZuXNyhlF7h8Pdcb9FUdwxiFW6vw_r17Zs2Lm5MIA4WbWOPr5wiApnoQwgAMd28AQ7X4sNcBNpRknWnnXrWwqK7RQqVR6TYVSiDZEtj3PUhwNemKqunM-GRhSzzohKDdZf1a9HRUtZbBQ9Fb26HpJJTs_6uFl3ai2GMFzYwzyQq83MxItggvKJorZZZ9hw9zBHo" />
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Valentina Rossi</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">Compra verificada • Crema Rizos
+                    Sublime</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-surface-container-low rounded-xl p-space-md flex flex-col justify-between shadow-sm">
+              <div class="flex flex-col gap-space-xs">
+                <div class="flex items-center gap-1 text-amber-500">
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                  <span class="material-symbols-outlined text-[16px]"
+                    style='font-variation-settings: "FILL" 1;'>star</span>
+                </div>
+                <h4 class="font-title-md text-title-md text-primary">"El sérum es seda líquida en botella"</h4>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">
+                  Con 2 gotas antes del secado mi cabello liso parece de publicidad. No deja nada de grasa ni sensación
+                  pesada, solo una soltura increíble y un aroma floral delicado que dura todo el día.
+                </p>
+              </div>
+              <div class="pt-space-md mt-space-md flex items-center gap-3">
+                <div class="w-11 h-11 rounded-full overflow-hidden bg-surface-container-highest shrink-0">
+                  <img class="w-full h-full object-cover" alt="Clara Gómez"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzNKVtUk2lv3wuwmvrh8vTTQOjJe4FpdP4G7sbNWUPo1-qpluIVAgWK09tFKek1z-94a7t38pXGCCGgzBimRoUWyGEvkpjQuNwVLejdV2x593swDX4S91ohHWDQJ4UD5IbP4Qwcm8SCnTziJjW0S_8yrdyCNSrYdQOJ_t6_Sg2ZJwn9OgP_GJMctfAImHsg7x1yzOcvCbTqamqnXDTHPl4U1hVWH2BLXp67RBU6YmeENoX_PO6pL0" />
+                </div>
+                <div class="flex flex-col">
+                  <span class="font-label-lg text-label-lg text-primary font-bold">Clara Gómez</span>
+                  <span class="font-label-sm text-[11px] text-on-surface-variant">Compra verificada • Diamond Elixir
+                    Sérum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Trust Badges Strip -->
+          <div
+            class="w-full pt-space-lg grid grid-cols-2 md:grid-cols-4 gap-space-md bg-surface-container-low/60 p-space-md rounded-xl">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-[24px]">local_shipping</span>
+              <div>
+                <span class="font-label-lg text-label-lg block text-primary">Entrega 24/48 Horas</span>
+                <span class="font-body-sm text-[11px] text-on-surface-variant">Seguimiento en tiempo real</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-[24px]">published_with_changes</span>
+              <div>
+                <span class="font-label-lg text-label-lg block text-primary">Garantía 30 Días</span>
+                <span class="font-body-sm text-[11px] text-on-surface-variant">Devolución sin preguntas</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-[24px]">lock</span>
+              <div>
+                <span class="font-label-lg text-label-lg block text-primary">Compra 100% Segura</span>
+                <span class="font-body-sm text-[11px] text-on-surface-variant">Cifrado SSL bancario</span>
+              </div>
+            </div>
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-[24px]">card_giftcard</span>
+              <div>
+                <span class="font-label-lg text-label-lg block text-primary">Muestra Gratis</span>
+                <span class="font-body-sm text-[11px] text-on-surface-variant">Incluida en cada pedido B2C</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- FOOTER COMPLETO -->
+  <footer
+    class="w-full bg-surface-container-low text-on-surface py-space-xl mt-space-xl shadow-[0_-1px_6px_rgba(0,0,0,0.02)]"
+    id="sobre-nosotros">
+    <div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-lg pb-space-lg">
+        <div class="lg:col-span-2 flex flex-col gap-space-md">
+          <div class="flex items-center gap-space-sm">
+            <img alt="Logotipo Crisselia" class="h-9 w-auto object-contain"
+              src="https://lh3.googleusercontent.com/aida/AEtjO1VDJlKngDoOT7IonhrAlpU-T2GD1NgZH2vo_RUwj1ffeXEY9pl_Qoc1RQn_YhnbRKXmvFl3jC6-xQQCGInZiW4uJWOtLOh0Fw4VhUa5ChhzQbIucxkmfsec1KYjZX57xhXa7AFA--IoEXVNT19puDZm-zdnH9FdN-vG7T4oiwY8Qw2lFeky35_wiaijod0qaCSGgB0FEk4gx6xtyy-gt-yhOvwNy-FZfzp312443Mc0qh_oQS0_fbeXPw" />
+            <span class="font-headline-md text-headline-md text-primary">Crisselia</span>
+          </div>
+          <p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+            Haute Coiffure para tu rutina diaria en casa. Formulaciones botánicas italianas con queratina pura, seda
+            biomimética y microinfusiones nutritivas para restaurar la fibra capilar desde la raíz.
+          </p>
+          <div class="p-space-md rounded bg-surface-container flex flex-col gap-space-xs">
+            <div class="flex items-center gap-space-xs text-secondary">
+              <span class="material-symbols-outlined text-[20px]">biotech</span>
+              <span class="font-label-lg text-label-lg">¿Dudas con tu tipo de cabello?</span>
+            </div>
+            <p class="font-body-sm text-body-sm text-on-surface-variant">Realiza nuestro diagnóstico capilar
+              personalizado en 2 minutos.</p>
+            <a class="font-label-lg text-label-lg text-secondary hover:text-primary flex items-center gap-space-xs mt-1 transition-colors cursor-pointer"
+              href="#diagnostico" onclick="scrollToSection('diagnostico', event)">
+              <span>Iniciar Diagnóstico Personalizado</span>
+              <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-space-sm">
+          <span class="font-title-md text-title-md text-primary">Colecciones Capilares</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="filterCategory('Mascarillas Reparadoras'); scrollToSection('catalogo', event)">Hidratación
+              Profunda &amp; Brillo</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="filterCategory('Mascarillas Reparadoras'); scrollToSection('catalogo', event)">Reparación Intensa
+              Post-Color</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="filterCategory('Champús & Limpieza Suave'); scrollToSection('catalogo', event)">Tratamiento &amp;
+              Densidad</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="filterCategory('Rizos & Hidratación'); scrollToSection('catalogo', event)">Definición Sublime de
+              Rizos</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="filterCategory('Protección Térmica & Frizz'); scrollToSection('catalogo', event)">Elixires
+              Termoprotectores</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-space-sm" id="contacto">
+          <span class="font-title-md text-title-md text-primary">Atención al Cliente</span>
+          <ul class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+            <li class="hover:text-primary transition-colors cursor-pointer" onclick="openAccountModal('pedidos')">
+              Seguimiento de Mi Pedido</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="showInfoToast('Envíos Express', 'Entrega en 24-48 horas laborables. Gratis en compras superiores a $RD 2,500.')">
+              Envíos &amp; Entregas Express</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="showInfoToast('Garantía 30 Días', 'Devoluciones y cambios garantizados dentro de los primeros 30 días.')">
+              Política de Devoluciones (30 días)</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="scrollToSection('diagnostico', event)">Guía de Cuidado &amp; Rutinas</li>
+            <li class="hover:text-primary transition-colors cursor-pointer"
+              onclick="showInfoToast('Soporte Crisselia', 'Escríbenos a soporte@crisselia.com o vía WhatsApp.')">
+              Preguntas Frecuentes (FAQ)</li>
+          </ul>
+        </div>
+
+        <div class="flex flex-col gap-space-md">
+          <span class="font-title-md text-title-md text-primary">Elixir Privé Newsletter</span>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Suscríbete para recibir un 15% de bienvenida en
+            tu primera compra y consejos exclusivos de cuidado.</p>
+          <form class="flex flex-col gap-space-xs" onsubmit="handleNewsletterSubmit(event)">
+            <div class="flex gap-space-xs">
+              <input id="newsletter-email"
+                class="flex-1 bg-surface-container-lowest px-3 py-2 text-body-sm rounded text-on-surface placeholder:text-on-surface-variant/70 focus:outline-none focus:ring-1 focus:ring-secondary"
+                placeholder="Tu correo electrónico" type="email" required />
+              <button type="submit"
+                class="px-4 py-2 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container hover:text-on-primary-container transition-colors cursor-pointer">Unirme</button>
+            </div>
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Sin spam. Puedes cancelar cuando
+              desees.</span>
+          </form>
+        </div>
+      </div>
+
+      <div
+        class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md border-t border-outline-variant/30">
+        <div class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Crisselia. Prodotti per Capelli del
+          Cristiani. Todos los derechos reservados.</div>
+        <div class="flex items-center gap-4 text-on-surface-variant text-body-sm">
+          <span class="hover:text-primary transition-colors cursor-pointer"
+            onclick="showInfoToast('Privacidad', 'Tus datos están protegidos bajo estricto cifrado SSL.')">Privacidad</span>
+          <span class="hover:text-primary transition-colors cursor-pointer"
+            onclick="showInfoToast('Términos', 'Términos y condiciones oficiales de venta online Crisselia.')">Términos</span>
+          <span class="hover:text-primary transition-colors cursor-pointer"
+            onclick="showInfoToast('Cookies', 'Utilizamos cookies únicamente para mantener tu cesta y preferencias.')">Cookies</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== COMPONENTES MODALES Y CARRITO ==================== -->
+
+  <!-- DRAWER / PANEL LATERAL DE LA CESTA -->
+  <div id="cart-drawer-backdrop"
+    class="fixed inset-0 z-[70] bg-black/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"
+    onclick="closeCartDrawer()"></div>
+  <aside id="cart-drawer"
+    class="fixed top-0 right-0 z-[80] w-full max-w-md h-full bg-surface-container-lowest shadow-2xl flex flex-col justify-between translate-x-full transition-transform duration-300 ease-out">
+    <!-- Header Drawer -->
+    <div
+      class="p-space-md border-b border-outline-variant/30 flex items-center justify-between bg-surface-container-low/50">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-secondary text-[24px]">shopping_bag</span>
+        <div>
+          <h3 class="font-headline-md text-[20px] text-primary leading-tight">Tu Cesta</h3>
+          <span class="font-label-sm text-[11px] text-on-surface-variant" id="drawer-item-count">2 artículos</span>
+        </div>
+      </div>
+      <button
+        class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors cursor-pointer"
+        onclick="closeCartDrawer()" aria-label="Cerrar cesta">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </div>
+
+    <!-- Promo Shipping / Gift Bag Progress Bar -->
+    <div class="p-3 bg-primary text-on-primary flex flex-col gap-1.5" id="cart-promo-banner">
+      <div class="flex items-center justify-between text-[11px] font-label-sm">
+        <span id="promo-banner-text" class="flex items-center gap-1 font-semibold text-tertiary-fixed">
+          <span class="material-symbols-outlined text-[14px]">redeem</span>
+          ¡Añade 1 producto más para recibir tu Bolso Gratis!
+        </span>
+      </div>
+      <div class="w-full bg-white/20 h-1.5 rounded-full overflow-hidden">
+        <div id="promo-progress-bar" class="bg-secondary-fixed-dim h-full rounded-full transition-all duration-300"
+          style="width: 66%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Container -->
+    <div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-sm" id="cart-items-list">
+      <!-- Los productos de la cesta se renderizan dinámicamente aquí -->
+    </div>
+
+    <!-- Empty State -->
+    <div id="cart-empty-state"
+      class="hidden flex-1 flex flex-col items-center justify-center p-space-lg text-center gap-space-md">
+      <div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center text-secondary">
+        <span class="material-symbols-outlined text-[40px]">shopping_bag</span>
+      </div>
+      <div class="flex flex-col gap-1">
+        <h4 class="font-title-lg text-title-lg text-primary">Tu cesta está vacía</h4>
+        <p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+          Añade tus tratamientos favoritos para lucir un cabello radiante y sedoso.
+        </p>
+      </div>
+      <button
+        class="px-6 py-2.5 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-colors shadow-sm cursor-pointer"
+        onclick="closeCartDrawer(); scrollToSection('catalogo', event)">
+        Explorar Colección
+      </button>
+    </div>
+
+    <!-- Footer Summary & Checkout -->
+    <div class="p-space-md border-t border-outline-variant/30 bg-surface-container-low/40 flex flex-col gap-space-sm">
+      <div class="flex flex-col gap-1 text-body-sm">
+        <div class="flex justify-between text-on-surface-variant">
+          <span>Subtotal</span>
+          <span id="cart-subtotal" class="font-bold text-on-surface">$RD 2,850</span>
+        </div>
+        <div class="flex justify-between text-on-surface-variant">
+          <span>Envío</span>
+          <span id="cart-shipping" class="font-bold text-emerald-700">Gratis</span>
+        </div>
+        <div class="flex justify-between text-on-surface-variant" id="cart-gift-row" style="display: none;">
+          <span class="flex items-center gap-1 text-secondary font-semibold">
+            <span class="material-symbols-outlined text-[15px]">card_giftcard</span> Bolso de Línea Gratis
+          </span>
+          <span class="font-bold text-secondary">¡Incluido!</span>
+        </div>
+        <div class="border-t border-outline-variant/30 my-1"></div>
+        <div class="flex justify-between items-baseline font-title-lg text-title-lg text-primary">
+          <span>Total</span>
+          <span id="cart-total" class="font-bold">$RD 2,850</span>
+        </div>
+      </div>
+
+      <div class="flex flex-col gap-2 pt-1">
+        <button
+          class="w-full py-3 bg-secondary text-on-secondary rounded font-label-lg text-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors flex items-center justify-center gap-2 shadow-md cursor-pointer"
+          onclick="openCheckoutModal()">
+          <span class="material-symbols-outlined text-[18px]">lock</span>
+          <span>Finalizar Compra / Tramitar Pedido</span>
+        </button>
+        <button
+          class="w-full py-2 bg-surface-container text-on-surface rounded font-label-sm text-label-sm hover:bg-surface-container-high transition-colors cursor-pointer"
+          onclick="closeCartDrawer()">
+          Seguir Comprando
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- MODAL DE FINALIZAR PEDIDO (CHECKOUT) -->
+  <div id="checkout-modal"
+    class="fixed inset-0 z-[90] bg-black/60 backdrop-blur-sm items-center justify-center p-4 hidden"
+    onclick="handleCheckoutBackdropClick(event)">
+    <div
+      class="relative w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+      onclick="event.stopPropagation()">
+      <div class="p-space-md bg-primary text-on-primary flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary-fixed text-[22px]">verified_user</span>
+          <h3 class="font-headline-md text-[18px] leading-none">Tramitar Pedido Crisselia</h3>
+        </div>
+        <button
+          class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-on-primary transition-colors cursor-pointer"
+          onclick="closeCheckoutModal()">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <form class="p-space-lg overflow-y-auto flex flex-col gap-space-md" onsubmit="processOrder(event)">
+        <div class="p-3 bg-surface-container-low rounded flex items-center justify-between text-body-sm">
+          <div>
+            <span class="text-on-surface-variant block text-[11px]">Resumen de tu pedido:</span>
+            <span id="checkout-summary-items" class="font-bold text-primary">2 productos</span>
+          </div>
+          <div class="text-right">
+            <span class="text-on-surface-variant block text-[11px]">Total a Pagar:</span>
+            <span id="checkout-summary-total" class="font-title-lg text-title-lg text-secondary font-bold">$RD
+              2,850</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <span class="font-label-sm text-label-sm text-secondary uppercase font-bold">1. Datos de Contacto y
+            Envío</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <input id="checkout-name" type="text" placeholder="Nombre completo" required
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+            <input id="checkout-phone" type="tel" placeholder="WhatsApp / Teléfono" required
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+          </div>
+          <input id="checkout-address" type="text" placeholder="Dirección de entrega (Calle, Número, Sector)" required
+            class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+          <div class="grid grid-cols-2 gap-2">
+            <input id="checkout-city" type="text" placeholder="Ciudad / Provincia" required
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+            <input id="checkout-notes" type="text" placeholder="Nota adicional (opcional)"
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-2">
+          <span class="font-label-sm text-label-sm text-secondary uppercase font-bold">2. Método de Pago</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <label class="p-3 rounded border border-secondary/40 bg-secondary/5 flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="payment-method" value="whatsapp" checked class="text-secondary" />
+              <div class="flex flex-col text-[12px]">
+                <span class="font-bold text-primary">Confirmar por WhatsApp</span>
+                <span class="text-on-surface-variant">Atención rápida y personalizada</span>
+              </div>
+            </label>
+            <label
+              class="p-3 rounded border border-outline-variant/40 bg-surface-container-low flex items-center gap-2 cursor-pointer">
+              <input type="radio" name="payment-method" value="contraentrega" class="text-secondary" />
+              <div class="flex flex-col text-[12px]">
+                <span class="font-bold text-primary">Pago Contra Entrega</span>
+                <span class="text-on-surface-variant">Efectivo o transferencia al recibir</span>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3.5 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-all duration-300 shadow-lg flex items-center justify-center gap-2 cursor-pointer mt-2">
+          <span class="material-symbols-outlined text-[20px]">check_circle</span>
+          <span>Confirmar y Completar Pedido</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- MODAL DE FAVORITOS (WISHLIST) -->
+  <div id="wishlist-modal"
+    class="fixed inset-0 z-[85] bg-black/60 backdrop-blur-sm items-center justify-center p-4 hidden"
+    onclick="handleWishlistBackdropClick(event)">
+    <div
+      class="relative w-full max-w-lg bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden max-h-[85vh] flex flex-col"
+      onclick="event.stopPropagation()">
+      <div
+        class="p-space-md bg-surface-container-low border-b border-outline-variant/30 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-error text-[22px]"
+            style='font-variation-settings: "FILL" 1;'>favorite</span>
+          <h3 class="font-headline-md text-[18px] text-primary leading-tight">Tus Productos Favoritos</h3>
+        </div>
+        <button
+          class="w-7 h-7 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface transition-colors cursor-pointer"
+          onclick="closeWishlistModal()">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <div class="flex-1 overflow-y-auto p-space-md flex flex-col gap-space-sm" id="wishlist-items-container">
+        <!-- Render dinámico de favoritos -->
+      </div>
+
+      <div id="wishlist-empty" class="hidden p-space-lg text-center flex flex-col items-center gap-2">
+        <span class="material-symbols-outlined text-on-surface-variant text-[36px]">favorite_border</span>
+        <p class="font-body-sm text-on-surface-variant">No tienes productos en tu lista de deseos todavía.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL DE MI CUENTA -->
+  <div id="account-modal"
+    class="fixed inset-0 z-[85] bg-black/60 backdrop-blur-sm items-center justify-center p-4 hidden"
+    onclick="handleAccountBackdropClick(event)">
+    <div
+      class="relative w-full max-w-md bg-surface-container-lowest rounded-xl shadow-2xl overflow-hidden max-h-[85vh] flex flex-col"
+      onclick="event.stopPropagation()">
+      <div class="p-space-md bg-primary text-on-primary flex items-center justify-between">
+        <div class="flex items-center gap-2">
+          <span class="material-symbols-outlined text-tertiary-fixed text-[22px]">person</span>
+          <h3 class="font-headline-md text-[18px] leading-none">Mi Cuenta Crisselia</h3>
+        </div>
+        <button
+          class="w-7 h-7 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-on-primary transition-colors cursor-pointer"
+          onclick="closeAccountModal()">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+
+      <div class="p-space-lg flex flex-col gap-space-md">
+        <!-- Tab Selector -->
+        <div class="flex rounded bg-surface-container-low p-1 text-label-sm font-label-sm">
+          <button id="account-tab-login"
+            class="flex-1 py-1.5 rounded bg-surface-container-lowest text-primary font-bold shadow-sm cursor-pointer"
+            onclick="switchAccountTab('login')">Iniciar Sesión</button>
+          <button id="account-tab-orders"
+            class="flex-1 py-1.5 rounded text-on-surface-variant hover:text-on-surface cursor-pointer"
+            onclick="switchAccountTab('orders')">Mis Pedidos</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="account-login-form" class="flex flex-col gap-space-sm" onsubmit="handleAccountLogin(event)">
+          <div class="flex flex-col gap-1">
+            <span class="text-[11px] font-label-sm text-on-surface-variant">Correo Electrónico:</span>
+            <input type="email" placeholder="ejemplo@correo.com" required
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+          </div>
+          <div class="flex flex-col gap-1">
+            <span class="text-[11px] font-label-sm text-on-surface-variant">Contraseña:</span>
+            <input type="password" placeholder="••••••••" required
+              class="p-2.5 rounded bg-surface-container-low border border-outline-variant/40 text-body-sm text-on-surface focus:outline-none focus:ring-1 focus:ring-secondary" />
+          </div>
+          <button type="submit"
+            class="mt-2 w-full py-2.5 bg-primary text-on-primary rounded font-label-lg text-label-lg hover:bg-primary-container transition-colors cursor-pointer">
+            Acceder a Mi Cuenta
+          </button>
+        </form>
+
+        <!-- Orders History View -->
+        <div id="account-orders-view" class="hidden flex flex-col gap-2">
+          <div id="account-orders-list" class="flex flex-col gap-2 max-h-60 overflow-y-auto">
+            <!-- Pedidos dinámicos -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FLOATING TOAST NOTIFICATION -->
+  <div
+    class="fixed bottom-6 right-6 z-[100] bg-primary text-on-primary px-4 py-3 rounded shadow-2xl flex items-center gap-3 transition-all duration-300 translate-y-24 opacity-0 pointer-events-none"
+    id="cart-toast">
+    <span class="material-symbols-outlined text-tertiary-fixed text-[22px]">check_circle</span>
+    <div class="flex flex-col">
+      <span class="font-label-sm text-label-sm font-bold text-on-primary" id="toast-title">Producto añadido</span>
+      <span class="font-body-sm text-[11px] text-on-primary/85" id="toast-desc">Se ha actualizado tu cesta.</span>
+    </div>
+  </div>
+
+  <!-- FLOATING BACK-TO-TOP BUTTON -->
+  <button id="back-to-top-btn"
+    class="fixed bottom-6 left-6 z-40 w-11 h-11 rounded-full bg-primary text-on-primary shadow-lg flex items-center justify-center opacity-0 pointer-events-none translate-y-4 transition-all duration-300 hover:bg-primary-container cursor-pointer"
+    onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" aria-label="Volver arriba">
+    <span class="material-symbols-outlined text-[22px]">arrow_upward</span>
+  </button>
+
+  <!-- ==================== SCRIPTS DE LÓGICA Y FUNCIONALIDAD ==================== -->
+  <script>
+    // ESTADO GLOBAL
+    let cart = [];
+    let wishlist = [];
+    let orders = [];
+    let currentHairType = 'todos';
+    let currentNeed = 'todos';
+    let modalQty = 1;
+    let currentModalBasePrice = 950;
+    let currentModalProduct = { title: '', price: 950, image: '', variant: 'Estándar' };
+
+    // INICIALIZACIÓN AL CARGAR LA PÁGINA
+    document.addEventListener('DOMContentLoaded', () => {
+      initCart();
+      initWishlist();
+      initOrders();
+      initScrollListeners();
+      initKeyboardShortcuts();
+    });
+
+    // 1. GESTIÓN DE SCROLL Y NAVEGACIÓN
+    function initScrollListeners() {
+      const backToTopBtn = document.getElementById('back-to-top-btn');
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+          backToTopBtn.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+          backToTopBtn.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          backToTopBtn.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+          backToTopBtn.classList.remove('opacity-100', 'translate-y-0');
+        }
+      });
+    }
+
+    function scrollToSection(sectionId, event) {
+      if (event) event.preventDefault();
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const headerOffset = 140;
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    }
+
+    function setActiveNav(element) {
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('bg-primary', 'text-on-primary');
+        link.classList.add('text-on-surface-variant');
+      });
+      element.classList.add('bg-primary', 'text-on-primary');
+      element.classList.remove('text-on-surface-variant');
+    }
+
+    function initKeyboardShortcuts() {
+      window.addEventListener('keydown', (e) => {
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+          e.preventDefault();
+          const searchInput = document.getElementById('header-search-input');
+          if (searchInput) searchInput.focus();
+        }
+        if (e.key === 'Escape') {
+          closeCartDrawer();
+          closeProductModal();
+          closeCheckoutModal();
+          closeWishlistModal();
+          closeAccountModal();
+        }
+      });
+    }
+
+    // 2. GESTIÓN COMPLETA DEL CARRITO / CESTA
+    function initCart() {
+      const savedCart = localStorage.getItem('crisselia_cart');
+      if (savedCart) {
+        try {
+          cart = JSON.parse(savedCart);
+        } catch (e) {
+          cart = [];
+        }
+      } else {
+        // Cesta inicial con 2 artículos por defecto (alineado con la vista inicial)
+        cart = [
+          {
+            id: 'trattamento-latte',
+            title: 'Trattamento de Latte',
+            variant: 'Galón 3785 ML',
+            price: 1900,
+            qty: 1,
+            image: 'https://lh3.googleusercontent.com/aida/AEtjO1WpakGn3dmVB7gA8vATi9yzHYyzQD6vF8cQBTPKL_v3bxRKWbyiyoerxMF77ucMvPwqTVRiLG1C7egVcgVVqor2LlkMACE7Mf8J0TTcMysdYLhNfpM1JcdalHOFI-Iu-fr6Qv4xyqTdymVr0cn9B6D_z_qwzRX4v-qBn68ZIY4fzVE8EQFNINdqcg1S2BJvYT8V3e0odFqWy0d58jWnizsTMfcjTEOWjpuEgCsp8B2LqN4k9LagphNrMw'
+          },
+          {
+            id: 'diamond-elixir',
+            title: 'Diamond Elixir Sérum Capilar Sublime',
+            variant: '100 ml',
+            price: 950,
+            qty: 1,
+            image: 'https://lh3.googleusercontent.com/aida/AEtjO1UO5YrPah-mCJOH7UokXNZotpFXp1DYFjYOTv9WUDNzSo95IQXzuwYeRKuV5ldA15Rz7mrrb9HCwUWwE3dBhbXk_xumFGTyar9nJR5QDvxbFaUZYTU-CW3a0wRKvyt_lWLUjQJLtRP8-S89p8zGADtt5LvyP08pp_7RBOi19xA9SakW_m_6FXF48Fgvb1i2SzCP_TIG6P_i59mpMQ2VAUPTjYPEbaLx165QOReFSC0OwiXiWTV9ZhmQ-Q'
+          }
+        ];
+        saveCart();
+      }
+      updateCartUI();
+    }
+
+    function saveCart() {
+      localStorage.setItem('crisselia_cart', JSON.stringify(cart));
+      updateCartUI();
+    }
+
+    function quickAddToCart(title, price, image, variant = 'Formato Estándar', qty = 1) {
+      const cleanPrice = typeof price === 'number' ? price : parseInt(String(price).replace(/[^0-9]/g, '')) || 950;
+      const existingItem = cart.find(item => item.title === title && item.variant === variant);
+
+      if (existingItem) {
+        existingItem.qty += qty;
+      } else {
+        cart.push({
+          id: 'item-' + Date.now(),
+          title: title,
+          variant: variant,
+          price: cleanPrice,
+          qty: qty,
+          image: image || 'https://lh3.googleusercontent.com/aida/AEtjO1WpakGn3dmVB7gA8vATi9yzHYyzQD6vF8cQBTPKL_v3bxRKWbyiyoerxMF77ucMvPwqTVRiLG1C7egVcgVVqor2LlkMACE7Mf8J0TTcMysdYLhNfpM1JcdalHOFI-Iu-fr6Qv4xyqTdymVr0cn9B6D_z_qwzRX4v-qBn68ZIY4fzVE8EQFNINdqcg1S2BJvYT8V3e0odFqWy0d58jWnizsTMfcjTEOWjpuEgCsp8B2LqN4k9LagphNrMw'
+        });
+      }
+
+      saveCart();
+      showToast(`${title}`, `Añadido ${qty > 1 ? '(' + qty + 'x)' : ''} por $RD ${(cleanPrice * qty).toLocaleString()} a tu cesta.`);
+    }
+
+    function updateCartItemQty(index, delta) {
+      if (cart[index]) {
+        cart[index].qty += delta;
+        if (cart[index].qty <= 0) {
+          const removedName = cart[index].title;
+          cart.splice(index, 1);
+          showToast('Producto eliminado', `${removedName} se eliminó de tu cesta.`);
+        }
+        saveCart();
+      }
+    }
+
+    function removeCartItem(index) {
+      if (cart[index]) {
+        const removedName = cart[index].title;
+        cart.splice(index, 1);
+        saveCart();
+        showToast('Producto eliminado', `${removedName} se eliminó de tu cesta.`);
+      }
+    }
+
+    function updateCartUI() {
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const shipping = (subtotal >= 2500 || totalCount === 0) ? 0 : 200;
+      const total = subtotal + shipping;
+
+      // Actualizar badges
+      const badge = document.getElementById('cart-count-badge');
+      if (badge) badge.textContent = totalCount;
+      const drawerCount = document.getElementById('drawer-item-count');
+      if (drawerCount) drawerCount.textContent = `${totalCount} ${totalCount === 1 ? 'artículo' : 'artículos'}`;
+
+      // Renderizar lista en drawer
+      const container = document.getElementById('cart-items-list');
+      const emptyState = document.getElementById('cart-empty-state');
+
+      if (container && emptyState) {
+        if (cart.length === 0) {
+          container.innerHTML = '';
+          container.classList.add('hidden');
+          emptyState.classList.remove('hidden');
+        } else {
+          container.classList.remove('hidden');
+          emptyState.classList.add('hidden');
+
+          container.innerHTML = cart.map((item, idx) => `
+            <div class="flex items-center gap-space-sm p-2.5 rounded-lg bg-surface-container-low border border-outline-variant/30 transition-all">
+              <div class="w-16 h-16 rounded overflow-hidden bg-white shrink-0 p-1 flex items-center justify-center">
+                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-contain"/>
+              </div>
+              <div class="flex flex-col flex-1 min-w-0">
+                <h4 class="font-label-lg text-label-lg text-primary truncate">${item.title}</h4>
+                <span class="font-label-sm text-[11px] text-on-surface-variant">${item.variant}</span>
+                <div class="flex items-center justify-between mt-1">
+                  <span class="font-label-lg text-[13px] text-primary font-bold">$RD ${(item.price).toLocaleString()}</span>
+                  <div class="flex items-center bg-surface-container rounded border border-outline-variant/40">
+                    <button class="w-6 h-6 flex items-center justify-center text-primary font-bold hover:bg-surface-container-high cursor-pointer" onclick="updateCartItemQty(${idx}, -1)">-</button>
+                    <span class="w-6 text-center text-[12px] font-bold text-primary">${item.qty}</span>
+                    <button class="w-6 h-6 flex items-center justify-center text-primary font-bold hover:bg-surface-container-high cursor-pointer" onclick="updateCartItemQty(${idx}, 1)">+</button>
+                  </div>
+                </div>
+              </div>
+              <button class="text-on-surface-variant hover:text-error p-1 transition-colors cursor-pointer" onclick="removeCartItem(${idx})" aria-label="Eliminar ${item.title}">
+                <span class="material-symbols-outlined text-[18px]">delete</span>
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Totales
+      const subtotalEl = document.getElementById('cart-subtotal');
+      if (subtotalEl) subtotalEl.textContent = `$RD ${subtotal.toLocaleString()}`;
+
+      const shippingEl = document.getElementById('cart-shipping');
+      if (shippingEl) {
+        shippingEl.textContent = shipping === 0 ? 'Gratis' : `$RD ${shipping}`;
+        shippingEl.className = shipping === 0 ? 'font-bold text-emerald-700' : 'font-bold text-on-surface';
+      }
+
+      const totalEl = document.getElementById('cart-total');
+      if (totalEl) totalEl.textContent = `$RD ${total.toLocaleString()}`;
+
+      // Promo bolso gratis (3+ artículos)
+      const giftRow = document.getElementById('cart-gift-row');
+      const promoBanner = document.getElementById('promo-banner-text');
+      const progressBar = document.getElementById('promo-progress-bar');
+
+      if (giftRow && promoBanner && progressBar) {
+        if (totalCount >= 3) {
+          giftRow.style.display = 'flex';
+          promoBanner.innerHTML = '<span class="material-symbols-outlined text-[14px]">card_giftcard</span> ¡Felicidades! Bolso de Línea Gratis desbloqueado.';
+          progressBar.style.width = '100%';
+        } else {
+          giftRow.style.display = 'none';
+          const needed = 3 - totalCount;
+          promoBanner.innerHTML = `<span class="material-symbols-outlined text-[14px]">redeem</span> ¡Añade ${needed} ${needed === 1 ? 'producto más' : 'productos más'} para recibir tu Bolso Gratis!`;
+          progressBar.style.width = `${Math.min(100, Math.round((totalCount / 3) * 100))}%`;
+        }
+      }
+    }
+
+    function openCartDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+        backdrop.classList.add('opacity-100');
+        drawer.classList.remove('translate-x-full');
+        drawer.classList.add('translate-x-0');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function closeCartDrawer() {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (drawer && backdrop) {
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+        backdrop.classList.remove('opacity-100');
+        drawer.classList.add('translate-x-full');
+        drawer.classList.remove('translate-x-0');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    // 3. MODAL DE PRODUCTO / DETALLE
+    function openProductModal(title, priceFormatted, badge, ingredients, image, numericPrice) {
+      const modal = document.getElementById('product-detail-modal');
+      const cleanPrice = numericPrice || parseInt(String(priceFormatted).replace(/[^0-9]/g, '')) || 950;
+
+      currentModalBasePrice = cleanPrice;
+      currentModalProduct = {
+        title: title,
+        price: cleanPrice,
+        image: image || 'https://lh3.googleusercontent.com/aida/AEtjO1WpakGn3dmVB7gA8vATi9yzHYyzQD6vF8cQBTPKL_v3bxRKWbyiyoerxMF77ucMvPwqTVRiLG1C7egVcgVVqor2LlkMACE7Mf8J0TTcMysdYLhNfpM1JcdalHOFI-Iu-fr6Qv4xyqTdymVr0cn9B6D_z_qwzRX4v-qBn68ZIY4fzVE8EQFNINdqcg1S2BJvYT8V3e0odFqWy0d58jWnizsTMfcjTEOWjpuEgCsp8B2LqN4k9LagphNrMw',
+        variant: 'Formato Estándar'
+      };
+
+      document.getElementById('modal-title').textContent = title;
+      document.getElementById('modal-price').textContent = `$RD ${cleanPrice.toLocaleString()}`;
+      document.getElementById('modal-badge').textContent = badge || 'Alta Cosmética';
+      document.getElementById('modal-ingredients').textContent = ingredients || 'Extractos botánicos puros italianos';
+
+      const mainImg = document.getElementById('modal-main-img');
+      if (mainImg && image) mainImg.src = image;
+      const thumb1 = document.getElementById('modal-thumb-1');
+      if (thumb1 && image) thumb1.src = image;
+
+      modalQty = 1;
+      document.getElementById('modal-qty').textContent = modalQty;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeProductModal() {
+      const modal = document.getElementById('product-detail-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function handleModalBackdropClick(event) {
+      if (event.target.id === 'product-detail-modal') {
+        closeProductModal();
+      }
+    }
+
+    function updateQty(delta) {
+      modalQty = Math.max(1, modalQty + delta);
+      document.getElementById('modal-qty').textContent = modalQty;
+    }
+
+    function selectSize(btn, sizeName, calculatedPrice) {
+      document.querySelectorAll('#modal-size-container .size-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+      btn.classList.add('bg-primary', 'text-on-primary');
+
+      currentModalProduct.variant = sizeName;
+      currentModalProduct.price = calculatedPrice;
+      document.getElementById('modal-price').textContent = `$RD ${calculatedPrice.toLocaleString()}`;
+    }
+
+    function setModalThumb(idx, btn) {
+      const mainImg = document.getElementById('modal-main-img');
+      if (btn && btn.querySelector('img')) {
+        mainImg.style.opacity = '0.3';
+        setTimeout(() => {
+          mainImg.src = btn.querySelector('img').src;
+          mainImg.style.opacity = '1';
+        }, 150);
+      }
+    }
+
+    function confirmAddToCart() {
+      quickAddToCart(currentModalProduct.title, currentModalProduct.price, currentModalProduct.image, currentModalProduct.variant, modalQty);
+      closeProductModal();
+    }
+
+    function buyNowDirect() {
+      quickAddToCart(currentModalProduct.title, currentModalProduct.price, currentModalProduct.image, currentModalProduct.variant, modalQty);
+      closeProductModal();
+      openCartDrawer();
+    }
+
+    // 4. FILTROS Y BÚSQUEDA DEL CATÁLOGO
+    function setHairTypeFilter(type, btn) {
+      currentHairType = type;
+      document.querySelectorAll('#filter-hair-type .filter-btn').forEach(b => {
+        b.classList.remove('bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+      btn.classList.add('bg-primary', 'text-on-primary');
+      applyFilters();
+    }
+
+    function setNeedFilter(need, btn) {
+      currentNeed = need;
+      document.querySelectorAll('#filter-need .need-btn').forEach(b => {
+        b.classList.remove('bg-secondary', 'text-on-secondary');
+        b.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      btn.classList.remove('bg-surface-container-low', 'text-on-surface');
+      btn.classList.add('bg-secondary', 'text-on-secondary');
+      applyFilters();
+    }
+
+    function applyFilters() {
+      const products = document.querySelectorAll('.product-item');
+      let visibleCount = 0;
+
+      products.forEach(p => {
+        const pTypes = (p.getAttribute('data-type') || '').toLowerCase();
+        const pNeeds = (p.getAttribute('data-need') || '').toLowerCase();
+
+        const matchType = (currentHairType === 'todos') || pTypes.includes(currentHairType.toLowerCase());
+        const matchNeed = (currentNeed === 'todos') || pNeeds.includes(currentNeed.toLowerCase());
+
+        if (matchType && matchNeed) {
+          p.style.display = 'flex';
+          visibleCount++;
+        } else {
+          p.style.display = 'none';
+        }
+      });
+
+      const countLabel = document.getElementById('product-count');
+      if (countLabel) {
+        countLabel.textContent = `${visibleCount} Fórmulas Exclusivas B2C`;
+      }
+    }
+
+    function filterCategory(categoryName) {
+      const cat = categoryName.toLowerCase();
+      if (cat.includes('champús') || cat.includes('lavado')) {
+        setHairTypeFilter('todos', document.querySelector('#filter-hair-type button:first-child'));
+        setNeedFilter('hidratacion', document.querySelector('#filter-need button:nth-child(2)'));
+      } else if (cat.includes('mascarillas') || cat.includes('reparadoras')) {
+        setNeedFilter('plex', document.querySelector('#filter-need button:nth-child(3)'));
+      } else if (cat.includes('sérums') || cat.includes('aceites')) {
+        setNeedFilter('brillo', document.querySelector('#filter-need button:nth-child(5)'));
+      } else if (cat.includes('rizos')) {
+        setHairTypeFilter('rizado', document.querySelector('#filter-hair-type button:nth-child(4)'));
+      } else if (cat.includes('protección') || cat.includes('frizz')) {
+        setNeedFilter('antifrizz', document.querySelector('#filter-need button:nth-child(4)'));
+      }
+    }
+
+    function sortProducts(criteria) {
+      const grid = document.getElementById('products-grid');
+      const items = Array.from(grid.querySelectorAll('.product-item'));
+
+      items.sort((a, b) => {
+        const priceA = parseFloat(a.dataset.price) || 0;
+        const priceB = parseFloat(b.dataset.price) || 0;
+        const ratingA = parseFloat(a.dataset.rating) || 0;
+        const ratingB = parseFloat(b.dataset.rating) || 0;
+
+        if (criteria === 'precio-asc') return priceA - priceB;
+        if (criteria === 'precio-desc') return priceB - priceA;
+        if (criteria === 'rating') return ratingB - ratingA;
+        if (criteria === 'novedades') return (b.dataset.badge === 'nuevo') ? 1 : -1;
+        return (b.dataset.badge === 'bestseller' || b.dataset.badge === 'top') ? 1 : -1;
+      });
+
+      items.forEach(item => grid.appendChild(item));
+    }
+
+    function handleSearch(query) {
+      const term = query.toLowerCase().trim();
+      const products = document.querySelectorAll('.product-item');
+      let visibleCount = 0;
+
+      products.forEach(p => {
+        const title = (p.getAttribute('data-title') || '').toLowerCase();
+        const text = p.textContent.toLowerCase();
+        if (term === '' || title.includes(term) || text.includes(term)) {
+          p.style.display = 'flex';
+          visibleCount++;
+        } else {
+          p.style.display = 'none';
+        }
+      });
+
+      const countLabel = document.getElementById('product-count');
+      if (countLabel) {
+        countLabel.textContent = `${visibleCount} Fórmulas Encontradas`;
+      }
+    }
+
+    // 5. DIAGNÓSTICO CAPILAR INTERACTIVO
+    let quizSelection = { texture: null, concern: null };
+
+    function selectQuizOption(category, value, button) {
+      quizSelection[category] = value;
+
+      if (category === 'texture') {
+        document.querySelectorAll('.quiz-opt-texture').forEach(b => {
+          b.classList.remove('bg-secondary', 'text-on-secondary');
+          b.classList.add('bg-surface-container-low');
+        });
+        button.classList.remove('bg-surface-container-low');
+        button.classList.add('bg-secondary', 'text-on-secondary');
+      } else {
+        document.querySelectorAll('.quiz-opt-concern').forEach(b => {
+          b.classList.remove('bg-secondary', 'text-on-secondary');
+          b.classList.add('bg-surface-container-low');
+        });
+        button.classList.remove('bg-surface-container-low');
+        button.classList.add('bg-secondary', 'text-on-secondary');
+      }
+
+      if (quizSelection.texture && quizSelection.concern) {
+        const resultCard = document.getElementById('quiz-result-card');
+        const title = document.getElementById('quiz-rec-title');
+        const desc = document.getElementById('quiz-rec-desc');
+        const price = document.getElementById('quiz-rec-price');
+
+        if (quizSelection.texture === 'rizado' || quizSelection.concern === 'definicion') {
+          title.textContent = 'Pack Dúo Sublime Curl & Nutrición';
+          desc.textContent = 'Crema definidora de ondas + Mascarilla Reconstructora + Sérum Gotas de Seda.';
+          price.textContent = '$RD 2,975';
+        } else if (quizSelection.concern === 'danio' || quizSelection.texture === 'procesado') {
+          title.textContent = 'Ritual Sublime Cellular Repair + Diamond Elixir';
+          desc.textContent = 'Tratamiento intensivo Trattamento de Latte + Sérum Diamond Elixir + Mascarilla.';
+          price.textContent = '$RD 3,825';
+        } else {
+          title.textContent = 'Trío Sedosidad & Brillo Espejo Diario';
+          desc.textContent = 'Shampoo Reconstructor + Leaving Acondicionador + Gotas de Seda.';
+          price.textContent = '$RD 2,380';
+        }
+
+        resultCard.classList.remove('hidden');
+        resultCard.classList.add('flex');
+      }
+    }
+
+    function addQuizRecommendationToCart() {
+      const title = document.getElementById('quiz-rec-title').textContent;
+      const priceText = document.getElementById('quiz-rec-price').textContent;
+      const price = parseInt(priceText.replace(/[^0-9]/g, '')) || 3825;
+      quickAddToCart(title, price, 'https://lh3.googleusercontent.com/aida/AEtjO1X_Lwp1aXhE-yFwGzL0EKQ81QN565ppJ8E1dshVZu65uHbRI6QPX9_9ZaY9I8kHq6oB1zp-4khrBgRpaCqQ-CwmakFulHpWbhtqxy8x_4Sj0YGXmpsiWnXU08U8ISCXcBQXKYuxFunEfOByTtjUErmI9QzfI2RT1_JazToZs2tpNmr2RfSrYzjiDwbI3U3o3FN_OEHlN33N_KYfERtxVRP1Mguve2MbK2WqeroxcjyubPuRmLQgKhNwEQ', 'Pack Personalizado');
+      openCartDrawer();
+    }
+
+    // 6. FAVORITOS / WISHLIST
+    function initWishlist() {
+      const saved = localStorage.getItem('crisselia_wishlist');
+      if (saved) {
+        try { wishlist = JSON.parse(saved); } catch (e) { wishlist = []; }
+      }
+      updateWishlistBadges();
+    }
+
+    function toggleWishlist(title, price, image, btn) {
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const idx = wishlist.findIndex(item => item.title === title);
+
+      if (idx > -1) {
+        wishlist.splice(idx, 1);
+        btn.classList.remove('text-error');
+        btn.classList.add('text-on-surface-variant');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 0";
+        showToast('Eliminado de Favoritos', `${title} se quitó de tus guardados.`);
+      } else {
+        wishlist.push({ title, price, image });
+        btn.classList.remove('text-on-surface-variant');
+        btn.classList.add('text-error');
+        if (icon) icon.style.fontVariationSettings = "'FILL' 1";
+        showToast('Añadido a Favoritos', `${title} guardado en tu lista de deseos.`);
+      }
+
+      localStorage.setItem('crisselia_wishlist', JSON.stringify(wishlist));
+      updateWishlistBadges();
+    }
+
+    function updateWishlistBadges() {
+      const badge = document.getElementById('wishlist-count-badge');
+      if (badge) {
+        if (wishlist.length > 0) {
+          badge.textContent = wishlist.length;
+          badge.classList.remove('hidden');
+        } else {
+          badge.classList.add('hidden');
+        }
+      }
+    }
+
+    function openWishlistModal() {
+      const modal = document.getElementById('wishlist-modal');
+      const container = document.getElementById('wishlist-items-container');
+      const empty = document.getElementById('wishlist-empty');
+
+      if (wishlist.length === 0) {
+        container.innerHTML = '';
+        empty.classList.remove('hidden');
+      } else {
+        empty.classList.add('hidden');
+        container.innerHTML = wishlist.map((item, i) => `
+          <div class="flex items-center justify-between p-2.5 rounded bg-surface-container-low border border-outline-variant/30">
+            <div class="flex items-center gap-2">
+              <img src="${item.image}" class="w-12 h-12 rounded object-contain bg-white p-1" alt="${item.title}"/>
+              <div>
+                <span class="font-label-lg text-label-lg text-primary block">${item.title}</span>
+                <span class="font-label-sm text-[12px] font-bold text-secondary">$RD ${(item.price).toLocaleString()}</span>
+              </div>
+            </div>
+            <button class="px-3 py-1.5 bg-primary text-on-primary rounded font-label-sm text-label-sm hover:bg-primary-container cursor-pointer" onclick="quickAddToCart('${item.title}', ${item.price}, '${item.image}'); closeWishlistModal();">
+              Añadir
+            </button>
+          </div>
+        `).join('');
+      }
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeWishlistModal() {
+      const modal = document.getElementById('wishlist-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function handleWishlistBackdropClick(event) {
+      if (event.target.id === 'wishlist-modal') closeWishlistModal();
+    }
+
+    // 7. CHECKOUT Y GESTIÓN DE PEDIDOS
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        showToast('Cesta vacía', 'Por favor añade productos a tu cesta antes de finalizar.');
+        return;
+      }
+      closeCartDrawer();
+      const modal = document.getElementById('checkout-modal');
+      const totalCount = cart.reduce((sum, item) => sum + item.qty, 0);
+      const subtotal = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+      const shipping = subtotal >= 2500 ? 0 : 200;
+      const total = subtotal + shipping;
+
+      document.getElementById('checkout-summary-items').textContent = `${totalCount} ${totalCount === 1 ? 'producto' : 'productos'}`;
+      document.getElementById('checkout-summary-total').textContent = `$RD ${total.toLocaleString()}`;
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeCheckoutModal() {
+      const modal = document.getElementById('checkout-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function handleCheckoutBackdropClick(event) {
+      if (event.target.id === 'checkout-modal') closeCheckoutModal();
+    }
+
+    function processOrder(e) {
+      e.preventDefault();
+      const name = document.getElementById('checkout-name').value;
+      const phone = document.getElementById('checkout-phone').value;
+      const address = document.getElementById('checkout-address').value;
+      const city = document.getElementById('checkout-city').value;
+      const notes = document.getElementById('checkout-notes').value;
+      const method = document.querySelector('input[name="payment-method"]:checked').value;
+
+      const orderNumber = 'CRIS-' + Math.floor(100000 + Math.random() * 900000);
+      const total = cart.reduce((sum, item) => sum + (item.price * item.qty), 0);
+
+      const newOrder = {
+        orderNumber,
+        date: new Date().toLocaleDateString('es-ES'),
+        items: [...cart],
+        total,
+        name,
+        phone,
+        address: `${address}, ${city}`,
+        status: 'Confirmado - En preparación'
+      };
+
+      orders.unshift(newOrder);
+      localStorage.setItem('crisselia_orders', JSON.stringify(orders));
+
+      // Si es whatsapp, preparar mensaje
+      if (method === 'whatsapp') {
+        const orderSummaryText = cart.map(i => `• ${i.qty}x ${i.title} (${i.variant}) - $RD ${(i.price * i.qty).toLocaleString()}`).join('%0A');
+        const whatsappMsg = `*Nuevo Pedido Crisselia (${orderNumber})*%0A*Cliente:* ${name}%0A*Tel:* ${phone}%0A*Dirección:* ${address}, ${city}%0A%0A*Productos:*%0A${orderSummaryText}%0A%0A*Total:* $RD ${total.toLocaleString()}`;
+        window.open(`https://wa.me/18098201782?text=${whatsappMsg}`, '_blank');
+      }
+
+      // Vaciar cesta
+      cart = [];
+      saveCart();
+      closeCheckoutModal();
+
+      showToast(`¡Pedido ${orderNumber} Confirmado!`, `Gracias ${name}, tu pedido está en preparación.`);
+    }
+
+    // 8. MI CUENTA Y SEGUIMIENTO
+    function initOrders() {
+      const saved = localStorage.getItem('crisselia_orders');
+      if (saved) {
+        try { orders = JSON.parse(saved); } catch (e) { orders = []; }
+      }
+    }
+
+    function openAccountModal(tab = 'login') {
+      const modal = document.getElementById('account-modal');
+      switchAccountTab(tab);
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeAccountModal() {
+      const modal = document.getElementById('account-modal');
+      if (modal) {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = 'auto';
+      }
+    }
+
+    function handleAccountBackdropClick(event) {
+      if (event.target.id === 'account-modal') closeAccountModal();
+    }
+
+    function switchAccountTab(tab) {
+      const tabLogin = document.getElementById('account-tab-login');
+      const tabOrders = document.getElementById('account-tab-orders');
+      const formLogin = document.getElementById('account-login-form');
+      const viewOrders = document.getElementById('account-orders-view');
+      const listOrders = document.getElementById('account-orders-list');
+
+      if (tab === 'login') {
+        tabLogin.className = 'flex-1 py-1.5 rounded bg-surface-container-lowest text-primary font-bold shadow-sm cursor-pointer';
+        tabOrders.className = 'flex-1 py-1.5 rounded text-on-surface-variant hover:text-on-surface cursor-pointer';
+        formLogin.classList.remove('hidden');
+        viewOrders.classList.add('hidden');
+      } else {
+        tabOrders.className = 'flex-1 py-1.5 rounded bg-surface-container-lowest text-primary font-bold shadow-sm cursor-pointer';
+        tabLogin.className = 'flex-1 py-1.5 rounded text-on-surface-variant hover:text-on-surface cursor-pointer';
+        formLogin.classList.add('hidden');
+        viewOrders.classList.remove('hidden');
+
+        if (orders.length === 0) {
+          listOrders.innerHTML = '<p class="text-body-sm text-on-surface-variant text-center py-4">No tienes pedidos registrados aún.</p>';
+        } else {
+          listOrders.innerHTML = orders.map(o => `
+            <div class="p-3 rounded bg-surface-container-low border border-outline-variant/30 flex flex-col gap-1 text-[12px]">
+              <div class="flex justify-between font-bold text-primary">
+                <span>${o.orderNumber}</span>
+                <span class="text-emerald-700">${o.status}</span>
+              </div>
+              <span class="text-on-surface-variant">${o.date} • Total: $RD ${(o.total).toLocaleString()}</span>
+              <span class="text-[11px] text-on-surface-variant">${o.items.length} productos</span>
+            </div>
+          `).join('');
+        }
+      }
+    }
+
+    function handleAccountLogin(e) {
+      e.preventDefault();
+      showToast('Sesión Iniciada', 'Bienvenido de nuevo a Crisselia Haute Coiffure.');
+      closeAccountModal();
+    }
+
+    // 9. TOASTS Y FORMULARIOS
+    function showToast(title, desc) {
+      const toast = document.getElementById('cart-toast');
+      if (!toast) return;
+      document.getElementById('toast-title').textContent = title;
+      document.getElementById('toast-desc').textContent = desc;
+
+      toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      clearTimeout(window._toastTimer);
+      window._toastTimer = setTimeout(() => {
+        toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+
+    function showInfoToast(title, desc) {
+      showToast(title, desc);
+    }
+
+    function handleNewsletterSubmit(e) {
+      e.preventDefault();
+      const email = document.getElementById('newsletter-email').value;
+      showToast('¡Suscripción Exitosa!', `Te hemos enviado tu cupón del 15% de bienvenida a ${email}.`);
+      e.target.reset();
+    }
+  </script>
+</body>
+
+</html>

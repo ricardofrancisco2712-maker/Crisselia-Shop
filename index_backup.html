@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html><html lang="es" style="width: 1280px; height: 5450px; overflow: hidden; position: relative;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><title>Crisselia | Alta CosmÃƒÂ©tica Capilar</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-high":"#e6e8eb","surface-bright":"#f7f9fc","on-secondary-fixed":"#001d31","surface":"#f7f9fc","on-surface-variant":"#41474e","on-tertiary-fixed-variant":"#004c69","inverse-surface":"#2d3133","surface-container-lowest":"#ffffff","on-primary-container":"#88b9e3","outline":"#72787f","on-primary-fixed-variant":"#0e4b6f","tertiary-fixed-dim":"#7bd0ff","error-container":"#ffdad6","tertiary-container":"#004c68","error":"#ba1a1a","inverse-primary":"#9bccf6","surface-variant":"#e0e3e6","on-primary-fixed":"#001e30","on-surface":"#191c1e","primary-container":"#0c4a6e","inverse-on-surface":"#eff1f4","surface-tint":"#2f6388","secondary-fixed-dim":"#93ccff","on-secondary":"#ffffff","on-primary":"#ffffff","surface-container-low":"#f2f4f7","surface-dim":"#d8dadd","surface-container-highest":"#e0e3e6","primary-fixed-dim":"#9bccf6","on-tertiary-container":"#3dc0fc","tertiary-fixed":"#c4e7ff","secondary":"#006398","surface-container":"#eceef1","primary":"#00334f","secondary-container":"#5bb8fe","on-tertiary-fixed":"#001e2c","on-secondary-container":"#00476e","primary-fixed":"#cbe6ff","secondary-fixed":"#cce5ff","on-error":"#ffffff","on-background":"#191c1e","tertiary":"#003449","on-error-container":"#93000a","outline-variant":"#c1c7cf","on-tertiary":"#ffffff","on-secondary-fixed-variant":"#004b73","background":"#f7f9fc"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"margin-mobile":"1.25rem","gutter":"1.5rem","space-xl":"3rem","margin":"3rem","space-xs":"0.25rem","gutter-mobile":"1rem","space-md":"1rem","space-sm":"0.5rem","space-lg":"1.75rem"},fontFamily:{"title-md":["Inter"],"title-lg":["Bodoni Moda"],"body-sm":["Inter"],"label-sm":["Inter"],"display-lg":["Bodoni Moda"],"headline-md":["Bodoni Moda"],"headline-lg-mobile":["Bodoni Moda"],"body-lg":["Inter"],"body-md":["Inter"],"label-lg":["Inter"],"display-lg-mobile":["Bodoni Moda"],"headline-lg":["Bodoni Moda"]},fontSize:{"title-md":["16px",{"lineHeight":"24px","letterSpacing":"0.01em","fontWeight":"600"}],"title-lg":["20px",{"lineHeight":"28px","fontWeight":"600"}],"body-sm":["13px",{"lineHeight":"18px","fontWeight":"400"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"500"}],"display-lg":["56px",{"lineHeight":"64px","letterSpacing":"-0.02em","fontWeight":"600"}],"headline-md":["26px",{"lineHeight":"32px","fontWeight":"500"}],"headline-lg-mobile":["28px",{"lineHeight":"34px","fontWeight":"500"}],"body-lg":["18px",{"lineHeight":"28px","fontWeight":"300"}],"body-md":["15px",{"lineHeight":"22px","fontWeight":"400"}],"label-lg":["13px",{"lineHeight":"16px","letterSpacing":"0.08em","fontWeight":"600"}],"display-lg-mobile":["38px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.01em","fontWeight":"500"}]}}}};</script><style>
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes softPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.animate-float {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+.animate-soft-pulse {
+  animation: softPulse 3s ease-in-out infinite;
+}
+.product-item, .group.p-space-md {
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+.product-item:hover, .group.p-space-md:hover {
+  transform: translateY(-4px);
+}
+button, a.px-6, .filter-btn, .need-btn, .size-btn {
+  transition: transform 0.15s ease, background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease !important;
+}
+button:active, a.px-6:active, .filter-btn:active, .need-btn:active, .size-btn:active {
+  transform: scale(0.96) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-float, .animate-soft-pulse {
+    animation: none !important;
+  }
+}
+</style></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(12,74,110,0.06)]"><div class="w-full bg-primary text-on-primary py-space-xs px-margin-mobile lg:px-margin"><div class="max-w-7xl mx-auto flex items-center justify-between font-label-sm text-label-sm"><div class="hidden sm:flex items-center gap-space-sm"><span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim">local_shipping</span><span class="">EnvÃƒÂ­o express gratuito en pedidos superiores a $50</span></div><div class="mx-auto sm:mx-0 font-label-sm tracking-wider uppercase text-tertiary-fixed">CosmÃƒÂ©tica Capilar Italiana de Vanguardia</div><div class="hidden md:flex items-center gap-space-md"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[13px] text-tertiary-fixed-dim">verified</span>GarantÃƒÂ­a de FÃƒÂ³rmula Original</span></div></div></div><div class="h-20 max-w-7xl mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md"><button aria-label="MenÃº" class="lg:hidden p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center -ml-2" onclick="toggleMobileMenu()"><span class="material-symbols-outlined text-[26px]">menu</span></button><a class="flex items-center gap-space-sm" data-path="inicio" href="#"><img alt="Logotipo fiel de Crisselia recreado exactamente de la imagen de referencia WhatsApp con la tipografÃƒÂ­a caligrÃƒÂ¡fica cursiva 'Crisselia', la ola/gota azul estilo remolino a la derecha y el subtÃƒÂ­tulo 'PRODOTTI PER CAPELLI DEL CRISTIANI'." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1VDJlKngDoOT7IonhrAlpU-T2GD1NgZH2vo_RUwj1ffeXEY9pl_Qoc1RQn_YhnbRKXmvFl3jC6-xQQCGInZiW4uJWOtLOh0Fw4VhUa5ChhzQbIucxkmfsec1KYjZX57xhXa7AFA--IoEXVNT19puDZm-zdnH9FdN-vG7T4oiwY8Qw2lFeky35_wiaijod0qaCSGgB0FEk4gx6xtyy-gt-yhOvwNy-FZfzp312443Mc0qh_oQS0_fbeXPw"><div class="hidden sm:flex flex-col"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none">Crisselia</span><span class="font-label-sm text-[10px] text-on-surface-variant tracking-widest uppercase mt-0.5">Haute Coiffure B2C</span></div></a></div><div class="hidden lg:flex flex-1 max-w-md mx-space-md"><div class="relative w-full flex items-center"><span class="material-symbols-outlined absolute left-3 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-lowest pl-10 pr-12 py-space-xs text-body-sm font-body-sm text-on-surface rounded placeholder:text-on-surface-variant/70 focus:outline-none focus:bg-surface-container-lowest shadow-[0_1px_3px_rgba(0,0,0,0.04)]" placeholder="Buscar champÃƒÂº, sÃƒÂ©rum, mascarilla... Ã¢Å’ËœK" type="text"><span class="absolute right-3 px-1.5 py-0.5 rounded bg-surface-container-high font-label-sm text-[10px] text-on-surface-variant">Ã¢Å’ËœK</span></div></div><div class="flex items-center gap-space-sm sm:gap-space-md"><button aria-label="Favoritos" class="p-2 text-on-surface-variant hover:text-primary transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-[22px]">favorite</span></button><a class="hidden sm:flex items-center gap-space-xs py-1.5 px-space-sm text-body-sm font-label-lg text-on-surface hover:text-primary transition-colors" data-path="cuenta" href="#"><span class="material-symbols-outlined text-[20px]">person</span><span class="">Mi Cuenta</span></a><button class="relative flex items-center gap-space-xs py-1.5 px-space-sm bg-surface-container-lowest rounded text-on-surface hover:bg-surface-container transition-colors shadow-[0_1px_4px_rgba(0,0,0,0.05)]"><span class="material-symbols-outlined text-[20px] text-secondary">shopping_bag</span><span class="hidden md:inline font-label-lg text-label-lg">Cesta</span><span id="cart-counter" class="flex items-center justify-center min-w-[20px] h-5 px-1 bg-secondary text-on-secondary rounded-full font-label-sm text-[11px] transition-all duration-300">2</span></button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div><div class="w-full bg-surface-container-low/70 backdrop-blur-md hidden lg:block"><div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin"><nav class="flex items-center gap-space-xs py-space-xs whitespace-nowrap min-w-max" data-active-classes="bg-primary text-on-primary rounded font-label-lg"><a aria-current="page" class="px-space-sm py-1 transition-colors bg-primary text-on-primary rounded font-label-lg" data-path="inicio" href="#">Inicio</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="catalogo" href="#">CatÃƒÂ¡logo</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="champus-y-lavado" href="#">ChampÃƒÂºs &amp; Lavado</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="acondicionadores" href="#">Acondicionadores</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="ofertas" href="#">Ofertas</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="sobre-nosotros" href="#">Sobre Nosotros</a><a class="px-space-sm py-1 font-label-lg text-label-lg text-on-surface-variant hover:text-on-surface transition-colors" data-path="contacto" href="#">Contacto</a></nav></div></div><!-- MenÃº MÃ³vil Desplegable --><div id="mobile-menu" class="hidden lg:hidden w-full bg-surface-container-lowest shadow-md absolute left-0 top-full transition-all origin-top transform scale-y-0 opacity-0 duration-200"><nav class="flex flex-col py-4 px-margin-mobile gap-2"><a href="#" class="px-4 py-3 font-title-md text-primary bg-surface-container-low rounded">Inicio</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">CatÃ¡logo</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">ChampÃºs &amp; Lavado</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">Acondicionadores</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">Ofertas</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">Sobre Nosotros</a><a href="#" class="px-4 py-3 font-title-md text-on-surface-variant hover:bg-surface-container-low rounded">Contacto</a></nav></div></header><main class="w-full pt-20 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Top Ambient Glow Aura -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[1100px] h-[520px] bg-gradient-to-b from-secondary-fixed/30 via-tertiary-fixed-dim/15 to-transparent rounded-full blur-3xl pointer-events-none -z-10"></div>
+<!-- 1. HERO SECTION -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin pt-6 pb-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-gutter items-center">
+<!-- Left Hero Column -->
+<div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+<!-- Editorial Pill Tag -->
+<div class="inline-flex items-center gap-space-xs px-3 py-1.5 rounded-full bg-surface-container-low shadow-sm">
+<span class="inline-block w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase text-secondary">FÃƒÂ³rmulas Puras B2C Ã¢â‚¬Â¢ Alta CosmÃƒÂ©tica Diaria</span>
+</div>
+<!-- Main Title (Bodoni Moda) -->
+<h1 class="font-display-lg text-display-lg-mobile lg:text-display-lg text-primary tracking-tight leading-[1.08]">
+            El Cuidado Sublime <br class="hidden sm:inline">
+<span class="italic font-normal text-secondary">que Tu Cabello</span> Merece
+          </h1>
+<!-- Subtitle -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+            FÃƒÂ³rmulas botÃƒÂ¡nicas infusionadÃ­as con ÃƒÂ¡cido hialurÃƒÂ³nico biomolecular, aminoÃƒÂ¡cidos de seda y aceites de prensado en frÃƒÂ­o para restaurar la pureza y luminosidad de tu fibra capilar desde casa.
+          </p>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-sm pt-space-xs">
+<a class="px-6 py-3.5 bg-primary text-on-primary rounded font-label-lg text-label-lg tracking-wide hover:bg-primary-container transition-all duration-300 shadow-[0_8px_24px_rgba(0,51,79,0.18)] flex items-center gap-space-xs group" href="#catalogo">
+<span class="">Explorar CatÃƒÂ¡logo</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-0.5 transition-transform">arrow_forward</span>
+</a>
+<a class="px-6 py-3.5 bg-surface-container-lowest text-primary rounded font-label-lg text-label-lg tracking-wide hover:bg-surface-container-low transition-all duration-300 shadow-sm flex items-center gap-space-xs" href="#diagnostico">
+<span class="material-symbols-outlined text-[18px] text-secondary">auto_awesome</span>
+<span class="">Descubrir Mi Rutina</span>
+</a>
+</div>
+<!-- GuÃ­arantees Chips Bar -->
+<div class="w-full pt-space-md grid grid-cols-2 sm:grid-cols-4 gap-space-xs">
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">0% Sulfatos &amp; Sal</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">wb_twilight</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">Brillo Espejo 72h</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">cruelty_free</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">100% Cruelty-Free</span>
+</div>
+<div class="flex items-center gap-2 p-2 rounded bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[18px]">flag</span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">FÃƒÂ³rmula Italiana</span>
+</div>
+</div>
+</div>
+<!-- Right Hero Star Product Feature -->
+<div class="lg:col-span-5 relative flex justify-center lg:justify-end">
+<!-- Glass Morphic Main Card -->
+<div class="relative w-full max-w-md bg-surface-container-lowest/90 backdrop-blur-xl p-space-md rounded-xl shadow-[0_20px_50px_rgba(0,51,79,0.08)] flex flex-col gap-space-md animate-float">
+<!-- Image Frame -->
+<div class="relative w-full aspect-[4/5] rounded overflow-hidden bg-surface-container-low">
+<img class="w-full h-full object-cover" data-alt="Editorial luxury photograph of Diamond Elixir hair serum glass bottle bathed in soft morning light, surrounded by delicate water ripples, silk blue ribbons and morning dew drops in pure sapphire and pearl aesthetic." src="https://lh3.googleusercontent.com/aida/AEtjO1UO5YrPah-mCJOH7UokXNZotpFXp1DYFjYOTv9WUDNzSo95IQXzuwYeRKuV5ldA15Rz7mrrb9HCwUWwE3dBhbXk_xumFGTyar9nJR5QDvxbFaUZYTU-CW3a0wRKvyt_lWLUjQJLtRP8-S89p8zGADtt5LvyP08pp_7RBOi19xA9SakW_m_6FXF48Fgvb1i2SzCP_TIG6P_i59mpMQ2VAUPTjYPEbaLx165QOReFSC0OwiXiWTV9ZhmQ-Q">
+<!-- Floating Pill Tags -->
+<div class="absolute top-3 left-3 px-3 py-1 bg-primary text-on-primary font-label-sm text-label-sm tracking-wider uppercase rounded-full shadow-md animate-soft-pulse">
+                Bestseller #1
+              </div>
+<div class="absolute top-3 right-3 px-2.5 py-1 bg-surface-container-lowest/90 backdrop-blur-md rounded-full shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-primary font-bold">4.9</span>
+</div>
+</div>
+<!-- Content Details -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider font-semibold">SÃƒÂ©rum Protector &amp; Brillo</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">100 ml e 3.38 fl. oz.</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-primary leading-tight">
+                Diamond Elixir SÃƒÂ©rum Capilar Sublime
+              </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+                InfusiÃƒÂ³n botÃƒÂ¡nica con gotas de diamante micronizado y micro-aceite de camelia. Sellado inmediato de cutÃƒÂ­culas y termo-escudo hasta 230Ã‚Â°C.
+              </p>
+<!-- Price & Fast CTA -->
+<div class="pt-2 flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider">Precio Final PVP</span>
+<div class="flex items-baseline gap-2">
+<span class="font-title-lg text-title-lg text-primary font-bold">$28.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$34.00</span>
+</div>
+</div>
+<button class="px-5 py-2.5 bg-secondary text-on-secondary rounded font-label-lg text-label-lg hover:bg-secondary-container hover:text-on-secondary-container transition-colors shadow-sm flex items-center gap-1.5" onclick="openProductModal('Diamond Elixir SÃƒÂ©rum Capilar Sublime', '$28.00', 'SÃƒÂ©rum Protector &amp; Brillo', 'Gotas de diamante micronizado + Camelia blanca de prensado en frÃƒÂ­o', 'https://images.unsplash.com/photo-1608248597359-57e0b57e6a71?auto=format&amp;fit=crop&amp;w=800&amp;q=80')">
+<span class="material-symbols-outlined text-[16px]">shopping_bag</span>
+<span class="">AÃƒÂ±adir</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- 2. CATEGORÃƒÂAS CAPILARES DESTACADAS -->
+<section class="w-full bg-surface-container-lowest py-space-xl">
+<div class="max-w-7xl mx-auto px-margin-mobile lg:px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-end justify-between gap-space-sm">
+<div>
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest font-semibold">Descubre Por Tratamiento</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-1">CategorÃƒÂ­as Capilares</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">
+          FÃƒÂ³rmulas dermatolÃƒÂ³gicamente testadÃ­as sin sulfatos agresivos para potenciar la belleza natural de cada hebra.
+        </p>
+</div>
+<!-- Category Cards Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Category 1 -->
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm" href="#catalogo" onclick="filterCategory('ChampÃƒÂºs &amp; Limpieza Suave')">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Close up aesthetic shot of clear botanical moisturizing shampoo foam with pure water splashes and gentle bubbles on clean pale blue background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB7pN5afEptmZP0lJOoNfUpta-mdzK9O4P-MuprKJjDB-M6wQnu-Jd96jTs_UdQzfeNiLBNxl5ih6Fd-aSfmbRlLwkXcVe_iQoeiPOyb2r1HIny6l-VcZGNdKQd32LNxPbQ1KGApgKJT-DuuGa8uNQhcOO-gfdtFGUdubKov7M0t55h-f8JWM_cUCSQ2E4jv4E8cGAM6DfuHmHG4mlkeDuWxtLAW64zB14-Ka3XDe5j09eLPib0aY">
+</div>
+<span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">ChampÃƒÂºs &amp; Limpieza</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Sin sal ni sulfatos</span>
+</a>
+<!-- Category 2 -->
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm" href="#catalogo" onclick="filterCategory('Mascarillas Reparadoras')">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Rich silky whipped hair mask cream texture scooped elegantly on glass plate, luxurious pearlescent tone and pure hydration vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbv8iEMmc0uAofyGdLxU2XJjL-Jn-NKToWSJH40D30KeMpysu-2iMK2bZP5A8fKQzRHVsCBsTHN4c3xEFhrKZfgzLufjIti-PjBBRnB7Mqirtj9VDnMiPK4tU6wMZgevmvjeBQAqeRRuMNhaSbiR10O0Uo4PgriOjqk7DsFTjcuQL-AVITIQutVc1bmSkAjkpGlahK8kdKISYp86aKKF1-wYCi7vtxYFhjYa90jAEFoUa3PzdH-yo">
+</div>
+<span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Mascarillas Reparadoras</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Plex y aminoÃƒÂ¡cidos</span>
+</a>
+<!-- Category 3 -->
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm" href="#catalogo" onclick="filterCategory('SÃƒÂ©rums &amp; Aceites de Brillo')">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Golden luminous hair oil droplet falling from glass pipette against soft azure silk backdrop with sparkling reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAagvXiAzljL5bgFhVTMvAf_utZtFF_-TcSmmQaZ2s4F2c7XEsQ7ngeSqQvGqBDFbxFwqPPEbqhv65Lrr5NGUoykKB5qCMtOXfDVNbrzFPMrnESY7UOCtkhRFcjDJd07ef4VMJ9H7pxFlHuxWVftmeUWHjqDWW3byxSPBkHW5HR1It-grEOUHFVYU04NRzKhDWWmeiM7Zvg6IUFCQpqGzKYVXHmn1jm2L6yxFyP_AjEklobaQY57ic">
+</div>
+<span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">SÃƒÂ©rums &amp; Aceites</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Acabado brillo espejo</span>
+</a>
+<!-- Category 4 -->
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm" href="#catalogo" onclick="filterCategory('Rizos &amp; HidrataciÃƒÂ³n')">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Close-up of perfectly defined shiny bouncy curly hair strand illuminated with gentle sunlight in high luxury fashion style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDccVoxlI2qrO8muu8zD_q2SSXRflJGJ1L3kDk_IcfKbUsoO6ulKqZn_k1GFIfMV67Z776EAdzhLmeDv13jlptBL8gkD0JR8_EeRbV4wR_sy3TQZJXmFcvGLz-fpfXVFO2C424RayFHZ42x-2dvuHLxZLNzC9MGa_SYiqrxg4svKh6BAel-P0BDJREwO-nM-gTyqDI5wHTwiAsRW5L2-reteQZwRAAMXIQJeSCJ0_mlwMoEZASMJc">
+</div>
+<span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">Rizos &amp; HidrataciÃƒÂ³n</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">DefiniciÃƒÂ³n elÃƒÂ¡stica</span>
+</a>
+<!-- Category 5 -->
+<a class="group p-space-md rounded-xl bg-surface-container-low hover:bg-surface-container transition-all duration-300 flex flex-col items-center text-center shadow-sm col-span-2 sm:col-span-1" href="#catalogo" onclick="filterCategory('ProtecciÃƒÂ³n TÃƒÂ©rmica &amp; Frizz')">
+<div class="w-20 h-20 rounded-full overflow-hidden mb-space-sm bg-surface-container-lowest shadow-inner group-hover:scale-105 transition-transform">
+<img class="w-full h-full object-cover" data-alt="Fine mist spray of thermal hair protectant suspended gracefully in air with subtle cyan bokeh lights in luxury salon context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSa-BTlp3Q7O_KxNsSR-nXdL0iue5uIcSmmKNB2S4Wo3xlhB4DxknLTl1IzIz9y81nW5T4pXm94zykzLaL5QwIU5pC-LODBZWgY09nAifj9EkakJQjy6iaMeh0NGgJ8_P4XQiA05aFkzNXnnfyO6UxnqLb69cwp_Tg3VwO7kwshjArRb8Vf1Qfwxqtol172yOFA3ZXdrRq_4O9FbMGGdQXnMtfLnNXh6siOsqS0RbSULw1xBHIadg">
+</div>
+<span class="font-title-md text-title-md text-primary group-hover:text-secondary transition-colors">ProtecciÃƒÂ³n &amp; Frizz</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1">Escudo anti-humedad</span>
+</a>
+</div>
+</div>
+</section>
+<!-- 3. CATÃƒÂLOGO ÃƒÅ¡NICO PARA CONSUMIDOR FINAL (Interactive Filter Bar & Products) -->
+<section class="max-w-7xl mx-auto px-margin-mobile lg:px-margin py-space-xl flex flex-col gap-space-lg" id="catalogo">
+<!-- Section Header -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs text-secondary">
+<span class="material-symbols-outlined text-[18px]">spa</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest font-semibold">Tienda Oficial para Ti</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-primary">ColecciÃƒÂ³n Capilar Crisselia</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Precios finales con impuestos incluidos Ã¢â‚¬Â¢ Entrega gratuita desde $50</span>
+</div>
+<!-- Filter & Sort Control Panel -->
+<div class="p-space-md rounded-xl bg-surface-container-lowest shadow-sm flex flex-col gap-space-md">
+<!-- Row 1: Tipo de Cabello -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-xs sm:gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant min-w-[130px] font-semibold">Tipo de Cabello:</span>
+<div class="flex flex-wrap items-center gap-1.5" id="filter-hair-type">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm filter-btn active bg-primary text-on-primary" onclick="setHairTypeFilter('todos', this)">Todos</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface" onclick="setHairTypeFilter('liso', this)">Liso</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface" onclick="setHairTypeFilter('ondulado', this)">Ondulado</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface" onclick="setHairTypeFilter('rizado', this)">Rizado / Curly</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm filter-btn bg-surface-container-low text-on-surface" onclick="setHairTypeFilter('decolorado', this)">Decolorado / TeÃƒÂ±ido</button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm filter-btn" onclick="setHairTypeFilter('seco', this)">Seco / DaÃƒÂ±ado</button>
+</div>
+</div>
+<!-- Row 2: Necesidad Capilar -->
+<div class="flex flex-col sm:flex-row sm:items-center gap-space-xs sm:gap-space-sm">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant min-w-[130px] font-semibold">Necesidad:</span>
+<div class="flex flex-wrap items-center gap-1.5" id="filter-need">
+<button class="px-3 py-1 rounded font-label-sm text-label-sm need-btn active bg-secondary text-on-secondary" onclick="setNeedFilter('todos', this)">TodÃ­as las Necesidades</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface" onclick="setNeedFilter('hidratacion', this)">HidrataciÃƒÂ³n</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface" onclick="setNeedFilter('plex', this)">ReparaciÃƒÂ³n Plex</button>
+<button class="px-3 py-1 rounded hover:bg-surface-container font-label-sm text-label-sm need-btn bg-surface-container-low text-on-surface" onclick="setNeedFilter('antifrizz', this)">Anti-Frizz</button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn" onclick="setNeedFilter('brillo', this)">Brillo Espejo</button>
+<button class="px-3 py-1 rounded bg-surface-container-low text-on-surface hover:bg-surface-container font-label-sm text-label-sm need-btn" onclick="setNeedFilter('rizos', this)">DefiniciÃƒÂ³n de Rizos</button>
+</div>
+</div>
+<!-- Row 3: Sorting & Active Count -->
+<div class="pt-space-xs flex flex-wrap items-center justify-between gap-space-sm bg-surface-container-low/50 p-2.5 rounded">
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Mostrando:</span>
+<span class="font-label-sm text-label-sm font-bold text-primary" id="product-count">8 FÃƒÂ³rmulas Exclusivas B2C</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ordenar por:</span>
+<select class="bg-surface-container-lowest text-on-surface text-label-sm font-label-sm px-2.5 py-1 rounded focus:outline-none focus:bg-surface-container" id="sort-select" onchange="sortProducts(this.value)">
+<option value="populares">MÃƒÂ¡s Vendidos</option>
+<option value="novedades">Novedades</option>
+<option value="precio-asc">Precio: Menor a Mayor</option>
+<option value="rating">Mejor Valorados</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Product Cards Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="products-grid">
+<!-- Product Card 1 -->
+<div class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-badge="bestseller" data-need="plex hidratacion" data-price="32" data-rating="4.95" data-type="seco decolorado" style="display: flex;">
+<div>
+<div class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Editorial close up of Cellular Repair Mascarilla jar resting on white marble surface with silk cyan cloth and gentle water glow in luxury packaging style." src="https://lh3.googleusercontent.com/aida/AEtjO1WMy-hTlF6lb8vHRfMu_br1mJIQpJEbvS2hflz1jntoCJqshCWjoc0UgmyLlHLnZHYk4cpoD76IcVvUBKtXswt84blPnrTUpokvGAGnxE9L2zholwD3I7x1CGkWNtTC6NBsopQU0zsQUjl_79GoBSsBhntAwFSR36rqu28XhYDAEtLjsZ15ceESpcjB3xN7nSqGvhsD-ppnCkuroyV6sMETrJl_eO7xxedAWcDfTnXRH8sxDd5UF92tyg">
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded">
+              Bestseller
+            </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Tratamiento Plex Profundo</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">(142)</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">Tratamiento del Latte - Mascarilla Nutritiva Profunda</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+            Queratina biolÃƒÂ³gica y ÃƒÂ¡cido hialurÃƒÂ³nico biomolecular para sellar hebras decoloradÃ­as y rotas tras procesos quÃƒÂ­micos.
+          </p>
+<div class="mt-3 flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Cabello Seco &amp; DaÃƒÂ±ado</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Sin Sal</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP B2C</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">RD$1,900.00</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="openProductModal('Cellular Repair Mascarilla de Seda &amp; Queratina BiolÃƒÂ³gica', '$32.00', 'Tratamiento Plex Profundo', 'Queratina biomimÃƒÂ©tica + ÃƒÂcido HialurÃƒÂ³nico + Seda pura italiana', 'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&amp;fit=crop&amp;w=800&amp;q=80')" title="Ver Detalle">
+              Detalle
+            </button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm" onclick="quickAddToCart('Cellular Repair Mascarilla', '$32.00')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="">AÃƒÂ±adir</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-badge="nuevo" data-need="hidratacion brillo" data-price="24" data-rating="4.88" data-type="liso seco ondulado" style="display: flex;">
+<div>
+<div class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Minimalist luxury bottle of Moisture Infusion ChampÃƒÂº Botanico with delicate water droplets on pristine azure reflective pedestal." src="https://lh3.googleusercontent.com/aida/AEtjO1XxlHQWygECdJSaaLzQJQpm5YMHOjpJ2iOGlJEjhL7wKTpWpbg-uGi9rlP8hJ8fZ1VUzbgebXGe0AxMoERRYyk1ST_YBovWyeHcefRQJ9ZaR7nAQ2cZrRbDYq0VrEG_iqWDIfyuMzRgIlvwyEiMoMKWVsZqzDl5Dr9_8XrBmu_nAfE5cEHg0DLKVoBdDieY22YKuf7EFVhEiGO5QmA061S-45mzz2GnSfL9kSGPvATzhJL2mVO4OknM9Q">
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-secondary text-on-secondary font-label-sm text-label-sm uppercase rounded">
+              Nuevo Lanzamiento
+            </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Lavado Delicado Diario</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">(98)</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">Elixir Ventilatore Lozione - Brillo &amp; Desenredo InstantÃƒÂ¡neo</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+            Limpieza ultra-suave sin sulfatos con agua de coco fermentada y aloe vera bio que purifica el cuero cabelludo sin resecar puntas.
+          </p>
+<div class="mt-3 flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Liso / Ondulado</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">pH 5.2 Equilibrado</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP B2C</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">RD$900.00</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="openProductModal('Moisture Infusion ChampÃƒÂº BotÃƒÂ¡nico', '$24.00', 'Lavado Delicado Diario', 'Agua de coco fermentada + Aloe Barbadensis Bio + Niacinamida', 'https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?auto=format&amp;fit=crop&amp;w=800&amp;q=80')" title="Ver Detalle">
+              Detalle
+            </button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm" onclick="quickAddToCart('Moisture Infusion ChampÃƒÂº', '$24.00')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="">AÃƒÂ±adir</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-badge="oferta" data-need="rizos hidratacion antifrizz" data-price="26" data-rating="4.92" data-type="rizado ondulado seco" style="display: flex;">
+<div>
+<div class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Modern frosted tube of Sublime Curl Crema Definidora placed beside natural shea butter and argan nuts in sunlit bright luxury setting." src="https://lh3.googleusercontent.com/aida/AEtjO1Vrl1nHjKT4aLslv6pO-cYqh3biPrGcEzG0Bx0DmwV4OZ53YERFo8O1cDfOQdvjDjpi3bksyCCkdzx-UHZGh-TqMxAoYJjyuMZzVchd089aKssvp63J5rp8ZwxE6pWD8APGZVQO8NIeZCOGfzi13yRyPKtLoCgCjVycokEnAGIV5k3bmE83ALafi_xSa4WIk7MyM_f8fZXmcIKPWVkhwh9OYeSi9L5VXtp5s5EyFofqynty1H5C3wonHg">
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-tertiary-container text-on-tertiary-container font-label-sm text-label-sm uppercase rounded">
+              -15% Oferta
+            </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">DefiniciÃƒÂ³n Sin Peso</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">(115)</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">Cera Laceadora - DefiniciÃƒÂ³n &amp; Control Sedoso</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+            Activador y moldeador de bucles con manteca de murumuru y aceite de linaza. Aporta memoria elÃƒÂ¡stica y combate el encrespamiento 48 horas.
+          </p>
+<div class="mt-3 flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">MÃƒÂ©todo Curly Friendly</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Cero Residuos</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP B2C</span>
+<div class="flex items-baseline gap-1.5">
+<span class="font-title-lg text-title-lg text-primary font-bold">RD$1,200.00</span>
+<span class="font-body-sm text-[12px] text-on-surface-variant line-through">$30.00</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="openProductModal('Sublime Curl Crema Definidora', '$26.00', 'DefiniciÃƒÂ³n Sin Peso', 'Manteca de Murumuru + Linaza dorada + ProteÃƒÂ­na de arroz', 'https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&amp;fit=crop&amp;w=800&amp;q=80')" title="Ver Detalle">
+              Detalle
+            </button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm" onclick="quickAddToCart('Sublime Curl Crema', '$26.00')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="">AÃƒÂ±adir</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-badge="destacado" data-need="antifrizz brillo" data-price="22" data-rating="4.82" data-type="liso ondulado rizado seco" style="display: flex;">
+<div>
+<div class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Thermal Shield spray bottle with fine water vapor and gold accents against clean aquatic ambient background, studio lighting." src="https://lh3.googleusercontent.com/aida/AEtjO1WeUpyEvV0atvj_yEE_B0WWzl3_shzOE7SeFIZA758XI0uGT8n5A4fhZuaFHoc_uolYaHhbTOdqYFtq4QvAF7gSLl56Fxvonv8kt2-94qeU8N1cslE2nO3_Z7oreHhbQ9CUSvuxRtvSm5EmDSQ-RsTwtQAyzvH03DPZADhNxFenENHZrZDTsZIfk1u45rHRNnh5N5YnSSzaS60jOSQTA6R4in3-aiFtOmeq13ryKQ9qUIytzl1GcDCf">
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-surface-container-high text-on-surface font-label-sm text-label-sm uppercase rounded">
+              Termoprotector
+            </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center hover:text-error transition-colors shadow-sm text-error" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: &quot;FILL&quot; 1;">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Escudo Plancha &amp; Secador</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.8</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">(87)</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">ProteÃƒÂ­na Intensiva Reparadora - Anti-Rotura &amp; Fuerza</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+            Spray bifÃƒÂ¡sico ultraligero que crea una micropelÃƒÂ­cula protectora contra el calor tÃƒÂ©rmico de tenazas y secador.
+          </p>
+<div class="mt-3 flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">ProtecciÃƒÂ³n 230Ã‚Â°C</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Efecto Seda</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP B2C</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">RD$1,200.00</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm transition-colors" onclick="openProductModal('Thermal Shield Bruma Antihumedad', '$22.00', 'Escudo Plancha &amp; Secador', 'PolÃƒÂ­meros termorreactivos + Aceite de ArgÃƒÂ¡n lÃƒÂ­quido + Vitamina E', 'https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&amp;fit=crop&amp;w=800&amp;q=80')" title="Ver Detalle">
+              Detalle
+            </button>
+<button class="px-3.5 py-1.5 rounded bg-primary text-on-primary hover:bg-primary-container font-label-lg text-label-lg transition-colors flex items-center gap-1 shadow-sm" onclick="quickAddToCart('Thermal Shield Bruma', '$22.00')">
+<span class="material-symbols-outlined text-[16px]">add_shopping_cart</span>
+<span class="">AÃƒÂ±adir</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 5 -->
+<div class="product-item group bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between" data-badge="top" data-need="brillo plex hidratacion" data-price="28" data-rating="4.96" data-type="seco decolorado ondulado liso" style="display: flex;">
+<div>
+<div class="relative w-full aspect-[4/4.5] rounded overflow-hidden bg-surface-container-low mb-space-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="Amber and sapphire tinted glass flacon of Diamond Elixir hair serum resting on soft water waves with delicate highlights." src="https://lh3.googleusercontent.com/aida/AEtjO1V8EpFgDg_Al1DELRESh2bzclvgE1gQsHCNtTFCB-FoMZRdraZOSUwHuPzgBMDtaf15WyfNygaalS_r5-UiPkSR2hKJVAhNDUdl-IAZT-kesa3jsbyPVcq6tYHcUSYHKLdJ2lUCehECT9oc8psoXqDtzQmBscxywlQOPEAO8SJ3IfYGYsyRLsj7dDYwYJJx2yF_YOiJcWz0kNdXExUPL5V0n8o_cmEoo_6u2vSIeAJobQwZkgJdEsH_HQ">
+<span class="absolute top-3 left-3 px-2.5 py-1 bg-primary text-on-primary font-label-sm text-label-sm uppercase rounded">
+              Top Ventas
+            </span>
+<button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface-container-lowest/80 backdrop-blur-md flex items-center justify-center text-on-surface-variant hover:text-error transition-colors shadow-sm" onclick="toggleWishlist(this)">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+</button>
+</div>
+<div class="flex items-center justify-between gap-1 mb-1">
+<span class="font-label-sm text-[11px] text-secondary font-semibold uppercase tracking-wider">Elixir de Acabado</span>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-amber-500 text-[14px]" style="font-variation-settings: &quot;FILL&quot; 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">(180)</span>
+</div>
+</div>
+<h3 class="font-title-lg text-title-lg text-primary group-hover:text-secondary transition-colors line-clamp-1">Trattamento di Argan - NutriciÃƒÂ³n &amp; Suavidad Sublime</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 line-clamp-2">
+            Gotas doradÃ­as de nutriciÃƒÂ³n concentrada que reparan puntas abiertas al instante aportando un brillo reflectante sedoso sin apelmazar.
+          </p>
+<div class="mt-3 flex flex-wrap gap-1">
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Todo Tipo de Cabello</span>
+<span class="px-2 py-0.5 rounded bg-surface-container-low font-label-sm text-[10px] text-on-surface-variant">Puntas SelladÃ­as</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low/40 p-2.5 rounded">
+<div>
+<span class="font-label-sm text-[10px] text-on-surface-variant uppercase tracking-wider block">PVP B2C</span>
+<span class="font-title-lg text-title-lg text-primary font-bold">RD$1900.00</span>
+</div>
+<div class="flex items-center gap-1.5">
+<button class="px-2.5 py-1.5 rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm te
+<truncated 65535 bytes>
+
+NOTE: The output was truncated because it was too long. Use a more targeted query or a smaller range to get the information you need.
